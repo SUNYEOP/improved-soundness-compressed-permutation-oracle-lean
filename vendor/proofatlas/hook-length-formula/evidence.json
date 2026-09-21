@@ -1,0 +1,119 @@
+{
+  "artifactId": "artifact.known-hook-length-formula.endpoint.v001",
+  "checkerEvidence": {
+    "allowedAxiomProfile": "classical_mathlib_standard",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "buildStatus": "passed",
+    "recordedBuildElapsedMs": 4344,
+    "buildTranscriptRecorded": true,
+    "collectionProvenanceRecorded": true,
+    "hasSorryAx": false,
+    "hasUnexpectedAxioms": false,
+    "noSorryStatus": "passed"
+  },
+  "declarations": [
+    "AtlasKnownTheorems.HookLengthFormula.hookLengthFormula",
+    "AtlasKnownTheorems.HookLengthFormula.HookLengthFormulaStatement"
+  ],
+  "formalizationTargetId": "target.known.hook-length-formula.v001",
+  "publicationReview": {
+    "acceptedResultId": "accepted.known-hook-length-formula.endpoint.v001",
+    "currentPublicationRoute": "reviewed_commit_pinned_public_source",
+    "releasePlanStatus": "draft",
+    "releasePlanStatusContext": "Alternate route metadata; this publication uses the reviewed commit-pinned public source route.",
+    "reviewIds": [
+      "review.accepted.formal_evidence.h4b60d20d3789.v001",
+      "review.accepted.statement_alignment.h8ae596d4b590.v001",
+      "review.accepted.result_boundary.h806f4e88ebca.v001",
+      "review.accepted.public_wording.h4759cd21c97c.v001"
+    ],
+    "statementAlignmentStatus": "accepted",
+    "status": "accepted_result_recorded"
+  },
+  "reproducibility": {
+    "collectedAt": "2026-07-17T07:28:50.416Z",
+    "collectorCommit": "4fe06bd0bceb320cd84aaed667c1c3674cc73741",
+    "dependencyLockHash": "sha256:cc84341f093806a5daa527998a3cc585dc80a0f6bc41fbdca8aa47368ec312f1",
+    "leanToolchain": "leanprover/lean4:v4.29.1",
+    "packageCommit": "7e628b6361f20e33d6b8214adc608685b9d4da2d",
+    "sourceArtifactHash": "sha256:bfcd609759bb37494f274922f11b212beaae2dce56da4e197912ced7915089a6",
+    "sourceFile": "AtlasKnownTheorems/HookLengthFormula/Basic.lean"
+  },
+  "sourceRights": {
+    "licenseCommit": "7e628b6361f20e33d6b8214adc608685b9d4da2d",
+    "licenseIdentifier": "Apache-2.0",
+    "noticeCopyrightHolder": "Advameg, Inc.",
+    "noticeCopyrightYear": 2026
+  },
+  "sourceFootprint": {
+    "artifacts": [
+      {
+        "artifactId": "artifact.known-hook-length-formula.endpoint.v001",
+        "closureTotals": {
+          "bytes": 180085,
+          "files": 1,
+          "nonEmptyLines": 3692,
+          "physicalLines": 3977
+        },
+        "mainSourceFile": {
+          "bytes": 180085,
+          "nonEmptyLines": 3692,
+          "path": "AtlasKnownTheorems/HookLengthFormula/Basic.lean",
+          "physicalLines": 3977,
+          "sha256": "sha256:bfcd609759bb37494f274922f11b212beaae2dce56da4e197912ced7915089a6"
+        }
+      }
+    ],
+    "recordedDeclarationCount": 2,
+    "definition": {
+      "classificationsInferred": false,
+      "commentsIncluded": true,
+      "externalDependenciesIncluded": false,
+      "lineCounting": "Physical lines are split on LF, CRLF, or CR; a terminal newline does not create an extra line. Counted lines contain at least one non-whitespace character after Unicode whitespace trimming. Comments and documentation count as source lines.",
+      "scope": "The deduplicated union of first-party Lean files supplied in the checked local source closures for artifacts at one pinned package commit. External dependencies such as Mathlib are excluded."
+    },
+    "files": [
+      {
+        "bytes": 180085,
+        "nonEmptyLines": 3692,
+        "path": "AtlasKnownTheorems/HookLengthFormula/Basic.lean",
+        "physicalLines": 3977,
+        "sha256": "sha256:bfcd609759bb37494f274922f11b212beaae2dce56da4e197912ced7915089a6"
+      }
+    ],
+    "mainFiles": [
+      {
+        "bytes": 180085,
+        "nonEmptyLines": 3692,
+        "path": "AtlasKnownTheorems/HookLengthFormula/Basic.lean",
+        "physicalLines": 3977,
+        "sha256": "sha256:bfcd609759bb37494f274922f11b212beaae2dce56da4e197912ced7915089a6",
+        "artifactIds": [
+          "artifact.known-hook-length-formula.endpoint.v001"
+        ]
+      }
+    ],
+    "packageCommit": "7e628b6361f20e33d6b8214adc608685b9d4da2d",
+    "schemaVersion": "public-site-formalization-footprint.v1",
+    "totals": {
+      "deduplicatedMainFiles": {
+        "bytes": 180085,
+        "files": 1,
+        "nonEmptyLines": 3692,
+        "physicalLines": 3977
+      },
+      "deduplicatedSourceUnion": {
+        "bytes": 180085,
+        "files": 1,
+        "nonEmptyLines": 3692,
+        "physicalLines": 3977
+      }
+    }
+  },
+  "schemaVersion": "public-site-source-evidence.v1",
+  "statementId": "statement.known-hook-length-formula.endpoint.v001"
+}

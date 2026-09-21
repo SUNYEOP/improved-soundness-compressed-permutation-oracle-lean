@@ -1,0 +1,8 @@
+{
+  "version": "4.32.2",
+  "archive": "lean-4.32.2-windows.zip",
+  "url": "https://github.com/leanprover/lean4/releases/download/v4.32.2/lean-4.32.2-windows.zip",
+  "sha256": "369c2b480a2a6f8bfb727af42c333c894c4872a73b3503099abad7bef67549fa",
+  "mathlibRevision": "905b95818eb32af7874a58b427f50c1711a5e96c",
+  "releaseMetadata": ".tools/lean-4.32.2-release.json"
+}

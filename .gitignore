@@ -1,0 +1,15 @@
+.lake/
+.tools/
+.cache/
+logs/
+_scratch/
+migration/
+release/
+vendor/reference-notes/
+__pycache__/
+*.pyc
+*.olean
+*.ilean
+*.trace
+.DS_Store
+Thumbs.db

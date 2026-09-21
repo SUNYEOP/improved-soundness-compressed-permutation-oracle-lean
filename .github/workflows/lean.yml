@@ -1,0 +1,60 @@
+name: Lean proof verification
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lean-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    env:
+      MATHLIB_NO_CACHE_ON_UPDATE: "1"
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Check out the pinned source revision
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      - name: Install the pinned official elan release
+        run: |
+          set -euo pipefail
+          archive="$RUNNER_TEMP/elan.tar.gz"
+          install_dir="$RUNNER_TEMP/elan-installer"
+          curl --fail --location --retry 3 --output "$archive" \
+            https://github.com/leanprover/elan/releases/download/v4.2.4/elan-x86_64-unknown-linux-gnu.tar.gz
+          echo "42b94d4244e8353142c456ec0e4ca6528fd898a6c604d4059f494e706e431f63  $archive" | sha256sum --check
+          mkdir -p "$install_dir"
+          tar -xzf "$archive" -C "$install_dir"
+          "$install_dir/elan-init" -y --no-modify-path --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Install the project's Lean toolchain
+        run: elan toolchain install "$(tr -d '\r\n' < lean-toolchain)"
+
+      - name: Fetch Mathlib's pinned build cache
+        run: |
+          set -euo pipefail
+          lake --no-cache exe cache get --cache-from=legacy Mathlib
+          git diff --exit-code -- lean-toolchain lakefile.toml lake-manifest.json
+
+      - name: Build and verify proof dependencies and source integrity
+        run: python3 scripts/check-proof.py
+
+      - name: Show the portable verification summary
+        if: always()
+        run: |
+          if [ -f logs/proof-check.json ]; then
+            cat logs/proof-check.json
+          fi

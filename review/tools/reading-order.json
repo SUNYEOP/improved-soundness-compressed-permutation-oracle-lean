@@ -1,0 +1,77 @@
+[
+  {
+    "title": "States, partial traces, and common purifications",
+    "description": "These definitions give coordinate representations of state vectors and density matrices, the partial-trace sum, and a common-purification type requiring normalization and the specified reduced states.",
+    "names": [
+      "QuantumOracle.PureState", "QuantumOracle.ReducedState",
+      "QuantumOracle.reducedState", "QuantumOracle.CommonPurification",
+      "QuantumOracle.CommonPurification.distance", "QuantumOracle.purificationDistance"
+    ]
+  },
+  {
+    "title": "Permutations and databases",
+    "description": "Permutations act on Fin N, and databases are finite graphs of partial injections. Encoding distinguishes distinct answers. Auxiliary lookup and update definitions appear in the complete definition list.",
+    "names": [
+      "QuantumOracle.Database", "QuantumOracle.Database.lookup",
+      "QuantumOracle.PermutationExtensions.Perm",
+      "QuantumOracle.BasisLookup.Bits", "QuantumOracle.BasisLookup.Encoding"
+    ]
+  },
+  {
+    "title": "Admissible algorithms and their two executions",
+    "description": "Algorithm specifies finite private memory, an initial state, unitary gates, a query count, and an ordinary/marked query schedule. The exact and compressed executions use the same algorithm data.",
+    "names": [
+      "QuantumOracle.ExactCoherentQuery.Args",
+      "QuantumOracle.ConcreteExperiment.Algorithm",
+      "QuantumOracle.ExactExecution.initial", "QuantumOracle.ExactExecution.run",
+      "QuantumOracle.CompressedExecution.initial", "QuantumOracle.CompressedExecution.run",
+      "QuantumOracle.ConcreteExperiment.exactVector",
+      "QuantumOracle.ConcreteExperiment.compressedVector"
+    ]
+  },
+  {
+    "title": "Query and compression operators",
+    "description": "These definitions specify the exact query's action on basis states, the compression–lookup–compression construction of compressed queries, inverse queries, and coherent control. The complete list also includes the definitions underlying compression and lookup.",
+    "names": [
+      "QuantumOracle.ExactCoherentQuery.argumentBasis",
+      "QuantumOracle.ExactCoherentQuery.queryBasis",
+      "QuantumOracle.ExactCoherentQuery.query",
+      "QuantumOracle.Compression.pC",
+      "QuantumOracle.CompressedQuery.ordinary", "QuantumOracle.CompressedQuery.marked",
+      "QuantumOracle.CompressedQuery.inverseOrdinary",
+      "QuantumOracle.CompressedQuery.inverseMarked",
+      "QuantumOracle.CompressedCoherentQuery.branch",
+      "QuantumOracle.CompressedCoherentQuery.query"
+    ]
+  },
+  {
+    "title": "Output, discarded registers, and distance quantifiers",
+    "description": "The two executions are partially traced after splitting the workspace into output and discarded registers. Dist takes a supremum over admissible algorithms and, for each algorithm, an infimum over all finite normalized common purifications of the resulting states.",
+    "names": [
+      "QuantumOracle.OutputExperiment.Algorithm",
+      "QuantumOracle.OutputDiscard.discardVector",
+      "QuantumOracle.OutputExperiment.exactFinal",
+      "QuantumOracle.OutputExperiment.compressedFinal",
+      "QuantumOracle.ExperimentFamily",
+      "QuantumOracle.OutputExperiment.family",
+      "QuantumOracle.ExperimentFamily.Dist",
+      "QuantumOracle.OutputExperiment.Dist"
+    ]
+  },
+  {
+    "title": "The explicit isometry W and the theorem's purification pair",
+    "description": "W is defined by the polar normalization A*(sqrt(A†A))⁻¹, where A combines the extension maps on the harmonic layers. The final outputPurification pairs the exact execution transformed by W with the compressed execution. The implementation supplies the isometry and normalization proofs.",
+    "names": [
+      "QuantumOracle.ExtensionOperator.T", "QuantumOracle.KnowledgeSpace.K",
+      "QuantumOracle.HarmonicLayers.H", "QuantumOracle.RawHarmonic.raw",
+      "QuantumOracle.RawEmbedding.total", "QuantumOracle.MatrixPolar.gramSqrt",
+      "QuantumOracle.MatrixPolar.normalize", "QuantumOracle.PolarEmbedding.candidate",
+      "QuantumOracle.FiniteSoundnessWitness.outputPurification"
+    ]
+  },
+  {
+    "title": "Orthogonal projection on the final output",
+    "description": "project extends an orthogonal projection on the output by the identity on the common ancillary space. The theorem bounds the difference of projected norms, equivalently the difference of square roots of success probabilities.",
+    "names": ["QuantumOracle.ProjectorPurification.project"]
+  }
+]

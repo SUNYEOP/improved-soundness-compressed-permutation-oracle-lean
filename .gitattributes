@@ -1,0 +1,3 @@
+# Preserve exact bytes on every platform: source and review manifests hash them.
+# Git's automatic newline conversion would invalidate those hashes after checkout.
+* -text

@@ -1,0 +1,2669 @@
+{
+  "scope": "Syntactic semantic slice, not a minimal mathematical closure or a standalone proof",
+  "root": "QuantumOracle.ImprovedSoundness.soundness",
+  "statistics": {
+    "localDeclarations": 233,
+    "proofObligationsIncludingEndpoint": 79,
+    "nonProofDeclarations": 154,
+    "sourceCommands": 119,
+    "sourceFiles": 36,
+    "sourceExcerptLines": 587,
+    "externalBoundaryDeclarations": 358,
+    "externalModuleRoots": [
+      "Init",
+      "Mathlib"
+    ]
+  },
+  "coreSelections": [
+    "QuantumOracle.PureState",
+    "QuantumOracle.ReducedState",
+    "QuantumOracle.reducedState",
+    "QuantumOracle.CommonPurification",
+    "QuantumOracle.CommonPurification.distance",
+    "QuantumOracle.purificationDistance",
+    "QuantumOracle.Database",
+    "QuantumOracle.Database.lookup",
+    "QuantumOracle.PermutationExtensions.Perm",
+    "QuantumOracle.BasisLookup.Bits",
+    "QuantumOracle.BasisLookup.Encoding",
+    "QuantumOracle.ExactCoherentQuery.Args",
+    "QuantumOracle.ConcreteExperiment.Algorithm",
+    "QuantumOracle.ExactExecution.initial",
+    "QuantumOracle.ExactExecution.run",
+    "QuantumOracle.CompressedExecution.initial",
+    "QuantumOracle.CompressedExecution.run",
+    "QuantumOracle.ConcreteExperiment.exactVector",
+    "QuantumOracle.ConcreteExperiment.compressedVector",
+    "QuantumOracle.ExactCoherentQuery.argumentBasis",
+    "QuantumOracle.ExactCoherentQuery.queryBasis",
+    "QuantumOracle.ExactCoherentQuery.query",
+    "QuantumOracle.Compression.pC",
+    "QuantumOracle.CompressedQuery.ordinary",
+    "QuantumOracle.CompressedQuery.marked",
+    "QuantumOracle.CompressedQuery.inverseOrdinary",
+    "QuantumOracle.CompressedQuery.inverseMarked",
+    "QuantumOracle.CompressedCoherentQuery.branch",
+    "QuantumOracle.CompressedCoherentQuery.query",
+    "QuantumOracle.OutputExperiment.Algorithm",
+    "QuantumOracle.OutputDiscard.discardVector",
+    "QuantumOracle.OutputExperiment.exactFinal",
+    "QuantumOracle.OutputExperiment.compressedFinal",
+    "QuantumOracle.ExperimentFamily",
+    "QuantumOracle.OutputExperiment.family",
+    "QuantumOracle.ExperimentFamily.Dist",
+    "QuantumOracle.OutputExperiment.Dist",
+    "QuantumOracle.ExtensionOperator.T",
+    "QuantumOracle.KnowledgeSpace.K",
+    "QuantumOracle.HarmonicLayers.H",
+    "QuantumOracle.RawHarmonic.raw",
+    "QuantumOracle.RawEmbedding.total",
+    "QuantumOracle.MatrixPolar.gramSqrt",
+    "QuantumOracle.MatrixPolar.normalize",
+    "QuantumOracle.PolarEmbedding.candidate",
+    "QuantumOracle.FiniteSoundnessWitness.outputPurification",
+    "QuantumOracle.ProjectorPurification.project"
+  ],
+  "sources": [
+    {
+      "path": "QuantumOracle/Model/BlockOperator.lean",
+      "sha256": "62781e7a0f392652ff68dfd687f39dfef97db8a551cb1a6c5c4d0013c27a60d0",
+      "bytes": 4435
+    },
+    {
+      "path": "QuantumOracle/Model/BlockSupport.lean",
+      "sha256": "737e927769e3c83c099b672a6bc88919536b9a967a25b29f7a828ad61b41753b",
+      "bytes": 7051
+    },
+    {
+      "path": "QuantumOracle/Model/CompressedCoherentQuery.lean",
+      "sha256": "91afd4b9c14d25d9b5c4c210191aa286ae37087b86f1de4fe0c9f7078d64b7f0",
+      "bytes": 8860
+    },
+    {
+      "path": "QuantumOracle/Model/CompressedExecution.lean",
+      "sha256": "1b97c7265e1fe35eab70b9fb4cac3e2169166ab91ea30a957275f06a4bbdc5bc",
+      "bytes": 8878
+    },
+    {
+      "path": "QuantumOracle/Model/CompressedQuery.lean",
+      "sha256": "5a78c1056234a037d6bb8fe310034f249505407a90a452801fee86bfdca62f46",
+      "bytes": 6558
+    },
+    {
+      "path": "QuantumOracle/Model/Compression.lean",
+      "sha256": "a5524f587e23e871a0862b074ea28378268d3494f7e11de379a86a1f41ec08b5",
+      "bytes": 2995
+    },
+    {
+      "path": "QuantumOracle/Model/CompressionBlock.lean",
+      "sha256": "7939fb8f7aadff5c23fe7d1f563a59bc431e54d3e969af1e4385f09188fcc37c",
+      "bytes": 3262
+    },
+    {
+      "path": "QuantumOracle/Model/CompressionIndex.lean",
+      "sha256": "4b4d0ee6364a739ff52fc39e0d0783309423c314dc883ab9835b009c31f4fc66",
+      "bytes": 5649
+    },
+    {
+      "path": "QuantumOracle/Model/ConcreteAlgorithm.lean",
+      "sha256": "34c503fa06d6a2a50a84f47039fed73000408b0e8d105f04c6a4ec9df36704a3",
+      "bytes": 2158
+    },
+    {
+      "path": "QuantumOracle/Model/ConcreteExperiment.lean",
+      "sha256": "edf150bde2406d1793eef729c76a138a92f5ad5d7530814148c98ce16449b571",
+      "bytes": 8179
+    },
+    {
+      "path": "QuantumOracle/Model/ConsistentState.lean",
+      "sha256": "11f23f4478b80615c8fa2daec29b65e4a3ee45164f86a5330318e1f2ec133306",
+      "bytes": 9062
+    },
+    {
+      "path": "QuantumOracle/Model/Database.lean",
+      "sha256": "af27994dfb82a69ea7ee92e67e8e76516d22ae394c437a55325daab6ea3e20c3",
+      "bytes": 21040
+    },
+    {
+      "path": "QuantumOracle/Model/ExactCoherentQuery.lean",
+      "sha256": "50f4895789b698e7049ea67ce7dcdffb2a7eb1fc936845d2af1f69bae2debec0",
+      "bytes": 9096
+    },
+    {
+      "path": "QuantumOracle/Model/ExactExecution.lean",
+      "sha256": "b844bc9db9518405dd6e3e752a46094842b45a78e88a0393e65068a9cc6bf52d",
+      "bytes": 5841
+    },
+    {
+      "path": "QuantumOracle/Model/ExactQueryGrowth.lean",
+      "sha256": "b78b9bee3ca6bfd35ac87f05db0499413157d320737081f510787650c49529cf",
+      "bytes": 4446
+    },
+    {
+      "path": "QuantumOracle/Model/ExtensionOperator.lean",
+      "sha256": "fa1ec45adeeb1b24d6b221a0919b18e2acf9f4e5e081bef694529f900af636f3",
+      "bytes": 4366
+    },
+    {
+      "path": "QuantumOracle/Model/FinitePurification.lean",
+      "sha256": "05b3ea1706729837029dea9eee805e7ef92588eec7ed7fe009718a62217f39cd",
+      "bytes": 6387
+    },
+    {
+      "path": "QuantumOracle/Model/HarmonicLayers.lean",
+      "sha256": "c77179b4f43208af375fcd153ecd7994fd113cd88b42a07be23bc51074eb8f78",
+      "bytes": 4480
+    },
+    {
+      "path": "QuantumOracle/Model/HiddenIsometry.lean",
+      "sha256": "8d8228fe55cd3a92d1d2f8ee1d5fc01dc4e726133edd1a2d6d8ae5b15b2bd5f7",
+      "bytes": 4801
+    },
+    {
+      "path": "QuantumOracle/Model/KnowledgeSpace.lean",
+      "sha256": "60a126704cb9c29f990601431bcdd04e818bec47b511b93c9616f01dc4f4023b",
+      "bytes": 5390
+    },
+    {
+      "path": "QuantumOracle/Model/LevelEmbedding.lean",
+      "sha256": "fd8a6048592065263e733c930397bda2ce0ed0cc682d79d88bfd68e0af9c340d",
+      "bytes": 3170
+    },
+    {
+      "path": "QuantumOracle/Model/MatrixPolar.lean",
+      "sha256": "f29ab41985b69d4679552bb5a80c495114c0fbefa92df28d5226baadbd615504",
+      "bytes": 5974
+    },
+    {
+      "path": "QuantumOracle/Model/OrthonormalSwap.lean",
+      "sha256": "9ab14f64cdd6e2e407905ee5da29b9ac09ab5937fe19ba788bcf58c393f28231",
+      "bytes": 4044
+    },
+    {
+      "path": "QuantumOracle/Model/OutputDiscard.lean",
+      "sha256": "c6fea0379c04f0bb36034dfafe3d99c57a8eb0bb4178dd4769d7f62daa7b73e6",
+      "bytes": 3410
+    },
+    {
+      "path": "QuantumOracle/Model/OutputExperiment.lean",
+      "sha256": "14bead6017ddb0ba6783e83cf7bd8cc9d35e9ed8c27665ad4b19ae8c038e4253",
+      "bytes": 9200
+    },
+    {
+      "path": "QuantumOracle/Model/PermutationExtensions.lean",
+      "sha256": "179dd84a589ac4464c4a79af8d67711222aa4cd792806abfcc16b2ccc1e46db8",
+      "bytes": 2402
+    },
+    {
+      "path": "QuantumOracle/Model/PolarEmbedding.lean",
+      "sha256": "b5990ff0b9cf806e0869d48395fadced3edfd79dca9a41fc626022cef0d42846",
+      "bytes": 4868
+    },
+    {
+      "path": "QuantumOracle/Model/ProjectorPurification.lean",
+      "sha256": "f19eaf5748b2ea8d6023a4ef275449f065904cda4501f36d83ed635cd547eaee",
+      "bytes": 5770
+    },
+    {
+      "path": "QuantumOracle/Model/PurificationDistance.lean",
+      "sha256": "b84c26ec16e6f615812cfae6d040fa9775a56a1f031a5bff6cbf4aa134dfda4e",
+      "bytes": 4553
+    },
+    {
+      "path": "QuantumOracle/Model/Query.lean",
+      "sha256": "b493bd0220d50ffcf24d5f6a9d227ecdf4b5748e2668385d7832dd7a620fec04",
+      "bytes": 9177
+    },
+    {
+      "path": "QuantumOracle/Model/RawEmbedding.lean",
+      "sha256": "23dbf51c5ad6c48bf8311d678c7f0de0370a2988682c8a987331f14a246df27c",
+      "bytes": 6064
+    },
+    {
+      "path": "QuantumOracle/Model/RawHarmonic.lean",
+      "sha256": "6beac4fa7696b66aad18aff8ca720dd4f933de9355052c2c4aec5b413feebfa4",
+      "bytes": 6080
+    },
+    {
+      "path": "QuantumOracle/Model/SoundnessPurification.lean",
+      "sha256": "e93de666d753c75c61f6d7612b9f90c53b6ff21130d486975f88f9fd6123c9d6",
+      "bytes": 4031
+    },
+    {
+      "path": "QuantumOracle/Model/UniformState.lean",
+      "sha256": "9d4cbf364a15ab97603e51abb5f8d9e663983c273b25f2de423c95bff927226e",
+      "bytes": 3682
+    },
+    {
+      "path": "QuantumOracle/Model/WorkspaceKnowledge.lean",
+      "sha256": "56cdaa740e4b70dd77d014d8b0c8b0b8bbfbd0c0ff907313203f98843edf701c",
+      "bytes": 7063
+    },
+    {
+      "path": "QuantumOracle/Proof/ImprovedSoundness.lean",
+      "sha256": "464235311c5ab1d57dc055c37e83b922a2d6f5037ddc4f0ccc4fc33b6103a911",
+      "bytes": 4855
+    }
+  ],
+  "excerpts": [
+    {
+      "source": "QuantumOracle/Model/BlockOperator.lean",
+      "range": {
+        "startLine": 14,
+        "startColumn": 0,
+        "selectionStartLine": 15,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 15,
+        "selectionEndColumn": 12,
+        "endLine": 19,
+        "endColumn": 62
+      },
+      "sourceOwner": "QuantumOracle.BlockOperator.diagonal",
+      "declarations": [
+        "QuantumOracle.BlockOperator.diagonal"
+      ],
+      "sha256": "e00afa77dca02e4b065795a076909306a6599f4230dffb5b124a6bfc433f4c97"
+    },
+    {
+      "source": "QuantumOracle/Model/BlockOperator.lean",
+      "range": {
+        "startLine": 49,
+        "startColumn": 0,
+        "selectionStartLine": 50,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 50,
+        "selectionEndColumn": 13,
+        "endLine": 54,
+        "endColumn": 37
+      },
+      "sourceOwner": "QuantumOracle.BlockOperator.transport",
+      "declarations": [
+        "QuantumOracle.BlockOperator.transport"
+      ],
+      "sha256": "30b9eb0da7c8bf82f1d30224ca3cee60299b373b4d008af867b7f603bc7dd477"
+    },
+    {
+      "source": "QuantumOracle/Model/BlockOperator.lean",
+      "range": {
+        "startLine": 73,
+        "startColumn": 0,
+        "selectionStartLine": 74,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 74,
+        "selectionEndColumn": 10,
+        "endLine": 77,
+        "endColumn": 45
+      },
+      "sourceOwner": "QuantumOracle.BlockOperator.family",
+      "declarations": [
+        "QuantumOracle.BlockOperator.family"
+      ],
+      "sha256": "3e1e9d4cf171c1dfa056121f29313e9770d482bd71a5789f6226a7eb657d428a"
+    },
+    {
+      "source": "QuantumOracle/Model/BlockOperator.lean",
+      "range": {
+        "startLine": 89,
+        "startColumn": 0,
+        "selectionStartLine": 90,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 90,
+        "selectionEndColumn": 11,
+        "endLine": 93,
+        "endColumn": 25
+      },
+      "sourceOwner": "QuantumOracle.BlockOperator.onRight",
+      "declarations": [
+        "QuantumOracle.BlockOperator.onRight"
+      ],
+      "sha256": "cf07cca03fc006f8e648328b46ba5f2e610be9d3d11f9581903295f7917b6715"
+    },
+    {
+      "source": "QuantumOracle/Model/BlockSupport.lean",
+      "range": {
+        "startLine": 19,
+        "startColumn": 0,
+        "selectionStartLine": 19,
+        "selectionStartColumn": 7,
+        "selectionEndLine": 19,
+        "selectionEndColumn": 12,
+        "endLine": 20,
+        "endColumn": 35
+      },
+      "sourceOwner": "QuantumOracle.BlockSupport.State",
+      "declarations": [
+        "QuantumOracle.BlockSupport.State"
+      ],
+      "sha256": "8db2cc6205f7641116ce0399cb6ff54c5ebd7dbdd257eb861953d677b9042e98"
+    },
+    {
+      "source": "QuantumOracle/Model/BlockSupport.lean",
+      "range": {
+        "startLine": 108,
+        "startColumn": 0,
+        "selectionStartLine": 109,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 109,
+        "selectionEndColumn": 14,
+        "endLine": 110,
+        "endColumn": 68
+      },
+      "sourceOwner": "QuantumOracle.BlockSupport.emptyState",
+      "declarations": [
+        "QuantumOracle.BlockSupport.emptyState"
+      ],
+      "sha256": "17f74b4ab3817cb5dda742469e637b528487640b530d85d388e33f5f294afd82"
+    },
+    {
+      "source": "QuantumOracle/Model/CompressedCoherentQuery.lean",
+      "range": {
+        "startLine": 22,
+        "startColumn": 0,
+        "selectionStartLine": 23,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 23,
+        "selectionEndColumn": 22,
+        "endLine": 28,
+        "endColumn": 60
+      },
+      "sourceOwner": "QuantumOracle.CompressedCoherentQuery.ordinaryWithMarker",
+      "declarations": [
+        "QuantumOracle.CompressedCoherentQuery.ordinaryWithMarker"
+      ],
+      "sha256": "eff204ec0930992660baaa4496db68e051fc7f22c0ce8f9c69df1ceaa0dc4bd1"
+    },
+    {
+      "source": "QuantumOracle/Model/CompressedCoherentQuery.lean",
+      "range": {
+        "startLine": 39,
+        "startColumn": 0,
+        "selectionStartLine": 40,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 40,
+        "selectionEndColumn": 10,
+        "endLine": 45,
+        "endColumn": 42
+      },
+      "sourceOwner": "QuantumOracle.CompressedCoherentQuery.branch",
+      "declarations": [
+        "QuantumOracle.CompressedCoherentQuery.branch"
+      ],
+      "sha256": "8bd363ebabbed8d933b01de89aeca55084a74432d69ae58c6f691c52f75b88bd"
+    },
+    {
+      "source": "QuantumOracle/Model/CompressedCoherentQuery.lean",
+      "range": {
+        "startLine": 66,
+        "startColumn": 0,
+        "selectionStartLine": 67,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 67,
+        "selectionEndColumn": 17,
+        "endLine": 73,
+        "endColumn": 20
+      },
+      "sourceOwner": "QuantumOracle.CompressedCoherentQuery.controlsEquiv",
+      "declarations": [
+        "QuantumOracle.CompressedCoherentQuery.controlsEquiv"
+      ],
+      "sha256": "b5c94556a9c170ebe0f57e278629b0f933345531d476aaecda37f06535715ac0"
+    },
+    {
+      "source": "QuantumOracle/Model/CompressedCoherentQuery.lean",
+      "range": {
+        "startLine": 75,
+        "startColumn": 0,
+        "selectionStartLine": 76,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 76,
+        "selectionEndColumn": 9,
+        "endLine": 81,
+        "endColumn": 53
+      },
+      "sourceOwner": "QuantumOracle.CompressedCoherentQuery.query",
+      "declarations": [
+        "QuantumOracle.CompressedCoherentQuery.query"
+      ],
+      "sha256": "7bd7a5018e7af3e6cf16fe4c003434c47292cd1bbd3851751f4b3d3f210e9b33"
+    },
+    {
+      "source": "QuantumOracle/Model/CompressedCoherentQuery.lean",
+      "range": {
+        "startLine": 157,
+        "startColumn": 0,
+        "selectionStartLine": 158,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 158,
+        "selectionEndColumn": 15,
+        "endLine": 161,
+        "endColumn": 74
+      },
+      "sourceOwner": "QuantumOracle.CompressedCoherentQuery.liftedQuery",
+      "declarations": [
+        "QuantumOracle.CompressedCoherentQuery.liftedQuery"
+      ],
+      "sha256": "2c7a2904ee0d0864f50998c8950262cbcbfbf7ba4be051bc1e7aebdc178179dc"
+    },
+    {
+      "source": "QuantumOracle/Model/CompressedExecution.lean",
+      "range": {
+        "startLine": 23,
+        "startColumn": 0,
+        "selectionStartLine": 24,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 24,
+        "selectionEndColumn": 11,
+        "endLine": 25,
+        "endColumn": 66
+      },
+      "sourceOwner": "QuantumOracle.CompressedExecution.initial",
+      "declarations": [
+        "QuantumOracle.CompressedExecution.initial"
+      ],
+      "sha256": "a071b5a7bc6730d98822d550eb790a52a8470ce114da12f996a79c1b9123c9c1"
+    },
+    {
+      "source": "QuantumOracle/Model/CompressedExecution.lean",
+      "range": {
+        "startLine": 97,
+        "startColumn": 0,
+        "selectionStartLine": 98,
+        "selectionStartColumn": 7,
+        "selectionEndLine": 98,
+        "selectionEndColumn": 16,
+        "endLine": 98,
+        "endColumn": 76
+      },
+      "sourceOwner": "QuantumOracle.CompressedExecution.Workspace",
+      "declarations": [
+        "QuantumOracle.CompressedExecution.Workspace"
+      ],
+      "sha256": "ed3e6c5c3b4982bb97f5df33852300259028f332af273bb4b4d9bb415b07bf44"
+    },
+    {
+      "source": "QuantumOracle/Model/CompressedExecution.lean",
+      "range": {
+        "startLine": 100,
+        "startColumn": 0,
+        "selectionStartLine": 102,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 102,
+        "selectionEndColumn": 7,
+        "endLine": 109,
+        "endColumn": 71
+      },
+      "sourceOwner": "QuantumOracle.CompressedExecution.run",
+      "declarations": [
+        "QuantumOracle.CompressedExecution.run",
+        "QuantumOracle.CompressedExecution.run._f",
+        "QuantumOracle.CompressedExecution.run.match_1"
+      ],
+      "sha256": "c8a794b784ba2aa540bc6840a3946f86beef0ea2b6e9393772d3fdf39bad6e7f"
+    },
+    {
+      "source": "QuantumOracle/Model/CompressedQuery.lean",
+      "range": {
+        "startLine": 18,
+        "startColumn": 0,
+        "selectionStartLine": 19,
+        "selectionStartColumn": 19,
+        "selectionEndLine": 19,
+        "selectionEndColumn": 30,
+        "endLine": 21,
+        "endColumn": 44
+      },
+      "sourceOwner": "QuantumOracle.CompressedQuery.compression",
+      "declarations": [
+        "QuantumOracle.CompressedQuery.compression"
+      ],
+      "sha256": "62750dc05636b83957a5f967dbc70a8717eea8a07e5f53e48656ee25f93aae46"
+    },
+    {
+      "source": "QuantumOracle/Model/CompressedQuery.lean",
+      "range": {
+        "startLine": 37,
+        "startColumn": 0,
+        "selectionStartLine": 38,
+        "selectionStartColumn": 19,
+        "selectionEndLine": 38,
+        "selectionEndColumn": 27,
+        "endLine": 42,
+        "endColumn": 68
+      },
+      "sourceOwner": "QuantumOracle.CompressedQuery.ordinary",
+      "declarations": [
+        "QuantumOracle.CompressedQuery.ordinary"
+      ],
+      "sha256": "876ae43e52e5de9e39735cad81b9c34d187ad271b0cfb1343081f140fc7114e3"
+    },
+    {
+      "source": "QuantumOracle/Model/CompressedQuery.lean",
+      "range": {
+        "startLine": 44,
+        "startColumn": 0,
+        "selectionStartLine": 45,
+        "selectionStartColumn": 19,
+        "selectionEndLine": 45,
+        "selectionEndColumn": 25,
+        "endLine": 49,
+        "endColumn": 73
+      },
+      "sourceOwner": "QuantumOracle.CompressedQuery.marked",
+      "declarations": [
+        "QuantumOracle.CompressedQuery.marked"
+      ],
+      "sha256": "2efbe2fdb80296d26a02577e2a73deb4f349b57ac12986bebc356754388b960d"
+    },
+    {
+      "source": "QuantumOracle/Model/CompressedQuery.lean",
+      "range": {
+        "startLine": 65,
+        "startColumn": 0,
+        "selectionStartLine": 66,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 66,
+        "selectionEndColumn": 8,
+        "endLine": 68,
+        "endColumn": 35
+      },
+      "sourceOwner": "QuantumOracle.CompressedQuery.flip",
+      "declarations": [
+        "QuantumOracle.CompressedQuery.flip"
+      ],
+      "sha256": "b0e1e4cbec611bcac055828aaed1055c3cd3193598321016efaee900a48d811f"
+    },
+    {
+      "source": "QuantumOracle/Model/CompressedQuery.lean",
+      "range": {
+        "startLine": 70,
+        "startColumn": 0,
+        "selectionStartLine": 70,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 70,
+        "selectionEndColumn": 19,
+        "endLine": 73,
+        "endColumn": 67
+      },
+      "sourceOwner": "QuantumOracle.CompressedQuery.inverseOrdinary",
+      "declarations": [
+        "QuantumOracle.CompressedQuery.inverseOrdinary"
+      ],
+      "sha256": "94160eaaa0549e408c813b919f1bf8f6fb7195af9a3e90b4245317dce20a8661"
+    },
+    {
+      "source": "QuantumOracle/Model/CompressedQuery.lean",
+      "range": {
+        "startLine": 75,
+        "startColumn": 0,
+        "selectionStartLine": 75,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 75,
+        "selectionEndColumn": 17,
+        "endLine": 78,
+        "endColumn": 79
+      },
+      "sourceOwner": "QuantumOracle.CompressedQuery.inverseMarked",
+      "declarations": [
+        "QuantumOracle.CompressedQuery.inverseMarked"
+      ],
+      "sha256": "cb0d8b05b20d7fc8b7bd6270957ba4514c68eb07f92b492050db652c92df14ff"
+    },
+    {
+      "source": "QuantumOracle/Model/Compression.lean",
+      "range": {
+        "startLine": 21,
+        "startColumn": 0,
+        "selectionStartLine": 21,
+        "selectionStartColumn": 7,
+        "selectionEndLine": 21,
+        "selectionEndColumn": 12,
+        "endLine": 21,
+        "endColumn": 53
+      },
+      "sourceOwner": "QuantumOracle.Compression.State",
+      "declarations": [
+        "QuantumOracle.Compression.State"
+      ],
+      "sha256": "d164eee52e8635143849e16ea3d8cd539d146b2b2602018ffaf7e8d6a14fb167"
+    },
+    {
+      "source": "QuantumOracle/Model/Compression.lean",
+      "range": {
+        "startLine": 34,
+        "startColumn": 0,
+        "selectionStartLine": 35,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 35,
+        "selectionEndColumn": 6,
+        "endLine": 37,
+        "endColumn": 57
+      },
+      "sourceOwner": "QuantumOracle.Compression.pC",
+      "declarations": [
+        "QuantumOracle.Compression.pC"
+      ],
+      "sha256": "7008b71befe56a695465c495ae35a2b0fe7c461b8852b17ce23e52bbd1c71220"
+    },
+    {
+      "source": "QuantumOracle/Model/CompressionBlock.lean",
+      "range": {
+        "startLine": 21,
+        "startColumn": 0,
+        "selectionStartLine": 22,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 22,
+        "selectionEndColumn": 15,
+        "endLine": 24,
+        "endColumn": 51
+      },
+      "sourceOwner": "QuantumOracle.CompressionBlock.compression",
+      "declarations": [
+        "QuantumOracle.CompressionBlock.compression"
+      ],
+      "sha256": "b322a39213fa5a259873728b878f99d82a03ee92093d843656700801187c139b"
+    },
+    {
+      "source": "QuantumOracle/Model/CompressionIndex.lean",
+      "range": {
+        "startLine": 19,
+        "startColumn": 0,
+        "selectionStartLine": 20,
+        "selectionStartColumn": 7,
+        "selectionEndLine": 20,
+        "selectionEndColumn": 11,
+        "endLine": 20,
+        "endColumn": 59
+      },
+      "sourceOwner": "QuantumOracle.CompressionIndex.Base",
+      "declarations": [
+        "QuantumOracle.CompressionIndex.Base"
+      ],
+      "sha256": "dd0112cde24142b18a0a7e4a3f1da2f51ed38371523f29b820ffe828e0690c37"
+    },
+    {
+      "source": "QuantumOracle/Model/CompressionIndex.lean",
+      "range": {
+        "startLine": 22,
+        "startColumn": 0,
+        "selectionStartLine": 23,
+        "selectionStartColumn": 7,
+        "selectionEndLine": 23,
+        "selectionEndColumn": 12,
+        "endLine": 23,
+        "endColumn": 59
+      },
+      "sourceOwner": "QuantumOracle.CompressionIndex.Fresh",
+      "declarations": [
+        "QuantumOracle.CompressionIndex.Fresh"
+      ],
+      "sha256": "26a1a454bce8d54d7d666688face36ea155dd8f528399c83ee72acf9764746d5"
+    },
+    {
+      "source": "QuantumOracle/Model/CompressionIndex.lean",
+      "range": {
+        "startLine": 25,
+        "startColumn": 0,
+        "selectionStartLine": 25,
+        "selectionStartColumn": 23,
+        "selectionEndLine": 25,
+        "selectionEndColumn": 34,
+        "endLine": 26,
+        "endColumn": 20
+      },
+      "sourceOwner": "QuantumOracle.CompressionIndex.baseFintype",
+      "declarations": [
+        "QuantumOracle.CompressionIndex.baseFintype"
+      ],
+      "sha256": "ada27fe53b4191c11f7a78e2d45b29677dc2bfe3904d5f3f2ae985cc931c9f3b"
+    },
+    {
+      "source": "QuantumOracle/Model/CompressionIndex.lean",
+      "range": {
+        "startLine": 28,
+        "startColumn": 0,
+        "selectionStartLine": 28,
+        "selectionStartColumn": 23,
+        "selectionEndLine": 28,
+        "selectionEndColumn": 35,
+        "endLine": 29,
+        "endColumn": 20
+      },
+      "sourceOwner": "QuantumOracle.CompressionIndex.freshFintype",
+      "declarations": [
+        "QuantumOracle.CompressionIndex.freshFintype"
+      ],
+      "sha256": "2fc8762d7d0bcfa2f05d2ade0111c5c3f97f4d0fdff422490b86b385e422e84e"
+    },
+    {
+      "source": "QuantumOracle/Model/CompressionIndex.lean",
+      "range": {
+        "startLine": 31,
+        "startColumn": 0,
+        "selectionStartLine": 32,
+        "selectionStartColumn": 7,
+        "selectionEndLine": 32,
+        "selectionEndColumn": 12,
+        "endLine": 32,
+        "endColumn": 62
+      },
+      "sourceOwner": "QuantumOracle.CompressionIndex.Index",
+      "declarations": [
+        "QuantumOracle.CompressionIndex.Index"
+      ],
+      "sha256": "16886961d1dcdec6c886e6c49d35d8f615ee7508b98677903ab144d23f9cad7f"
+    },
+    {
+      "source": "QuantumOracle/Model/CompressionIndex.lean",
+      "range": {
+        "startLine": 54,
+        "startColumn": 0,
+        "selectionStartLine": 55,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 55,
+        "selectionEndColumn": 10,
+        "endLine": 57,
+        "endColumn": 36
+      },
+      "sourceOwner": "QuantumOracle.CompressionIndex.decode",
+      "declarations": [
+        "QuantumOracle.CompressionIndex.decode",
+        "QuantumOracle.CompressionIndex.decode.match_1"
+      ],
+      "sha256": "f3c5019eddc7908e2561db96a65ef5afc311d4454b4c3c4bd0187cb9924526f3"
+    },
+    {
+      "source": "QuantumOracle/Model/CompressionIndex.lean",
+      "range": {
+        "startLine": 108,
+        "startColumn": 0,
+        "selectionStartLine": 109,
+        "selectionStartColumn": 18,
+        "selectionEndLine": 109,
+        "selectionEndColumn": 31,
+        "endLine": 110,
+        "endColumn": 79
+      },
+      "sourceOwner": "QuantumOracle.CompressionIndex.databaseEquiv",
+      "declarations": [
+        "QuantumOracle.CompressionIndex.databaseEquiv"
+      ],
+      "sha256": "a41db4b336a3c9a593bf21a5345d3e1d70a2e80ea0840de65b9e51a75b53d6a1"
+    },
+    {
+      "source": "QuantumOracle/Model/ConcreteAlgorithm.lean",
+      "range": {
+        "startLine": 18,
+        "startColumn": 0,
+        "selectionStartLine": 19,
+        "selectionStartColumn": 10,
+        "selectionEndLine": 19,
+        "selectionEndColumn": 19,
+        "endLine": 26,
+        "endColumn": 28
+      },
+      "sourceOwner": "QuantumOracle.ConcreteExperiment.Algorithm",
+      "declarations": [
+        "QuantumOracle.ConcreteExperiment.Algorithm",
+        "QuantumOracle.ConcreteExperiment.Algorithm.auxDim",
+        "QuantumOracle.ConcreteExperiment.Algorithm.gates",
+        "QuantumOracle.ConcreteExperiment.Algorithm.initial",
+        "QuantumOracle.ConcreteExperiment.Algorithm.marked",
+        "QuantumOracle.ConcreteExperiment.Algorithm.mk",
+        "QuantumOracle.ConcreteExperiment.Algorithm.queries"
+      ],
+      "sha256": "22d78af8f55634372f8fbdd740d69bca269aaf0fe72a049eeb9b537fae1354e3"
+    },
+    {
+      "source": "QuantumOracle/Model/ConcreteAlgorithm.lean",
+      "range": {
+        "startLine": 28,
+        "startColumn": 0,
+        "selectionStartLine": 28,
+        "selectionStartColumn": 7,
+        "selectionEndLine": 28,
+        "selectionEndColumn": 26,
+        "endLine": 29,
+        "endColumn": 45
+      },
+      "sourceOwner": "QuantumOracle.ConcreteExperiment.Algorithm.Workspace",
+      "declarations": [
+        "QuantumOracle.ConcreteExperiment.Algorithm.Workspace"
+      ],
+      "sha256": "dd3fc57283d13b7886160a7d6ca752d5ae106b518aa357aa4339795f4abe7555"
+    },
+    {
+      "source": "QuantumOracle/Model/ConcreteExperiment.lean",
+      "range": {
+        "startLine": 24,
+        "startColumn": 0,
+        "selectionStartLine": 24,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 24,
+        "selectionEndColumn": 15,
+        "endLine": 26,
+        "endColumn": 64
+      },
+      "sourceOwner": "QuantumOracle.ConcreteExperiment.exactVector",
+      "declarations": [
+        "QuantumOracle.ConcreteExperiment.exactVector"
+      ],
+      "sha256": "6a4e6d9ba48d24909096a8991b29e8bd5df85fe24bc7800fd52b10fd33f8c120"
+    },
+    {
+      "source": "QuantumOracle/Model/ConcreteExperiment.lean",
+      "range": {
+        "startLine": 28,
+        "startColumn": 0,
+        "selectionStartLine": 28,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 28,
+        "selectionEndColumn": 20,
+        "endLine": 30,
+        "endColumn": 69
+      },
+      "sourceOwner": "QuantumOracle.ConcreteExperiment.compressedVector",
+      "declarations": [
+        "QuantumOracle.ConcreteExperiment.compressedVector"
+      ],
+      "sha256": "8478c97cedaabde10593398673fe1fda8b1e96191f99de4f2dd7b38b911f0ad9"
+    },
+    {
+      "source": "QuantumOracle/Model/ConsistentState.lean",
+      "range": {
+        "startLine": 30,
+        "startColumn": 0,
+        "selectionStartLine": 31,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 31,
+        "selectionEndColumn": 13,
+        "endLine": 32,
+        "endColumn": 44
+      },
+      "sourceOwner": "QuantumOracle.ConsistentState.amplitude",
+      "declarations": [
+        "QuantumOracle.ConsistentState.amplitude"
+      ],
+      "sha256": "30617c6569d4655178fd4a4d6c831c10a8159c53cb88e55008d8cc71fd7e153f"
+    },
+    {
+      "source": "QuantumOracle/Model/ConsistentState.lean",
+      "range": {
+        "startLine": 49,
+        "startColumn": 0,
+        "selectionStartLine": 50,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 50,
+        "selectionEndColumn": 10,
+        "endLine": 52,
+        "endColumn": 77
+      },
+      "sourceOwner": "QuantumOracle.ConsistentState.vector",
+      "declarations": [
+        "QuantumOracle.ConsistentState.vector"
+      ],
+      "sha256": "67719b1ede48cad019febf20ffc4869354f33678527c5b1916dea761eeaa0ace"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 19,
+        "startColumn": 0,
+        "selectionStartLine": 20,
+        "selectionStartColumn": 10,
+        "selectionEndLine": 20,
+        "selectionEndColumn": 18,
+        "endLine": 24,
+        "endColumn": 22
+      },
+      "sourceOwner": "QuantumOracle.Database",
+      "declarations": [
+        "QuantumOracle.Database",
+        "QuantumOracle.Database.casesOn",
+        "QuantumOracle.Database.edges",
+        "QuantumOracle.Database.mk",
+        "QuantumOracle.Database.rec",
+        "QuantumOracle.instDecidableEqDatabase",
+        "QuantumOracle.instDecidableEqDatabase.decEq",
+        "QuantumOracle.instDecidableEqDatabase.decEq.match_1"
+      ],
+      "sha256": "ae2eb5721431d03dc7fc9956f8019b19157d01bab6a16bbd7b8fe863f6559a5a"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 40,
+        "startColumn": 0,
+        "selectionStartLine": 40,
+        "selectionStartColumn": 14,
+        "selectionEndLine": 40,
+        "selectionEndColumn": 22,
+        "endLine": 40,
+        "endColumn": 67
+      },
+      "sourceOwner": "QuantumOracle.Database.instFintype",
+      "declarations": [
+        "QuantumOracle.Database.instFintype"
+      ],
+      "sha256": "461e820cf01e3feba3475bc2fd16659002456daf0388832efc692df41defc47e"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 42,
+        "startColumn": 0,
+        "selectionStartLine": 43,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 43,
+        "selectionEndColumn": 9,
+        "endLine": 46,
+        "endColumn": 22
+      },
+      "sourceOwner": "QuantumOracle.Database.empty",
+      "declarations": [
+        "QuantumOracle.Database.empty"
+      ],
+      "sha256": "28d41d3093e0b9ad03430f56da4182427e1ef34bcafdab6ddd8f5e1c8b544cc8"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 48,
+        "startColumn": 0,
+        "selectionStartLine": 49,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 49,
+        "selectionEndColumn": 10,
+        "endLine": 49,
+        "endColumn": 70
+      },
+      "sourceOwner": "QuantumOracle.Database.domain",
+      "declarations": [
+        "QuantumOracle.Database.domain"
+      ],
+      "sha256": "36d6c97cb9ad1d763a65e0f253ac947193acbc13752125d887e9eb54d225d55d"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 51,
+        "startColumn": 0,
+        "selectionStartLine": 52,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 52,
+        "selectionEndColumn": 9,
+        "endLine": 52,
+        "endColumn": 69
+      },
+      "sourceOwner": "QuantumOracle.Database.image",
+      "declarations": [
+        "QuantumOracle.Database.image"
+      ],
+      "sha256": "025736fb57bc43ec806d48207f9003788b916282ada6cd8b327c03488a4dac80"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 54,
+        "startColumn": 0,
+        "selectionStartLine": 55,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 55,
+        "selectionEndColumn": 8,
+        "endLine": 55,
+        "endColumn": 46
+      },
+      "sourceOwner": "QuantumOracle.Database.size",
+      "declarations": [
+        "QuantumOracle.Database.size"
+      ],
+      "sha256": "fe4c7f883ecc645729c98fede681cf36c732ddb4d9b942f5a71a816e30b46ea5"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 84,
+        "startColumn": 0,
+        "selectionStartLine": 85,
+        "selectionStartColumn": 18,
+        "selectionEndLine": 85,
+        "selectionEndColumn": 24,
+        "endLine": 86,
+        "endColumn": 59
+      },
+      "sourceOwner": "QuantumOracle.Database.lookup",
+      "declarations": [
+        "QuantumOracle.Database.lookup"
+      ],
+      "sha256": "2c194fb282ddb7c15f477cb42d99e0b05e4ab87d07f446aebd2b18e219d35385"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 124,
+        "startColumn": 0,
+        "selectionStartLine": 125,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 125,
+        "selectionEndColumn": 11,
+        "endLine": 136,
+        "endColumn": 30
+      },
+      "sourceOwner": "QuantumOracle.Database.inverse",
+      "declarations": [
+        "QuantumOracle.Database.inverse"
+      ],
+      "sha256": "3dbf9eee45c6961c33d7b925aa8f93baaeea96de8cce6b7323efbfb0b7503c6d"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 201,
+        "startColumn": 0,
+        "selectionStartLine": 203,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 203,
+        "selectionEndColumn": 7,
+        "endLine": 222,
+        "endColumn": 83
+      },
+      "sourceOwner": "QuantumOracle.Database.set",
+      "declarations": [
+        "QuantumOracle.Database.set"
+      ],
+      "sha256": "7cfb27b87b521a41231b7f10b541e462a15fab6cf3e30232bdf7bb83859db4af"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 224,
+        "startColumn": 0,
+        "selectionStartLine": 225,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 225,
+        "selectionEndColumn": 10,
+        "endLine": 227,
+        "endColumn": 23
+      },
+      "sourceOwner": "QuantumOracle.Database.update",
+      "declarations": [
+        "QuantumOracle.Database.update.match_1"
+      ],
+      "sha256": "998958a2be7f2a7e771275fbf7d7240efbc6104525cb33962d00d412e3d6327c"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 384,
+        "startColumn": 0,
+        "selectionStartLine": 385,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 385,
+        "selectionEndColumn": 9,
+        "endLine": 385,
+        "endColumn": 53
+      },
+      "sourceOwner": "QuantumOracle.Database.level",
+      "declarations": [
+        "QuantumOracle.Database.level"
+      ],
+      "sha256": "096f894a7a94255d3af25940e908701694e8df67f763db703cac419fa06a0d40"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 403,
+        "startColumn": 0,
+        "selectionStartLine": 404,
+        "selectionStartColumn": 7,
+        "selectionEndLine": 404,
+        "selectionEndColumn": 11,
+        "endLine": 404,
+        "endColumn": 35
+      },
+      "sourceOwner": "QuantumOracle.BasisLookup.Bits",
+      "declarations": [
+        "QuantumOracle.BasisLookup.Bits"
+      ],
+      "sha256": "f3b0d2a3363d226522e49128b08f99b2d2868d77b734e34c4f59ccf42763efc5"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 406,
+        "startColumn": 0,
+        "selectionStartLine": 406,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 406,
+        "selectionEndColumn": 7,
+        "endLine": 406,
+        "endColumn": 64
+      },
+      "sourceOwner": "QuantumOracle.BasisLookup.xor",
+      "declarations": [
+        "QuantumOracle.BasisLookup.xor"
+      ],
+      "sha256": "c2fb671d1f2a21a211eb7a70a23d554f3ba958e359f503e87319fe1de54af345"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 418,
+        "startColumn": 0,
+        "selectionStartLine": 419,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 419,
+        "selectionEndColumn": 11,
+        "endLine": 423,
+        "endColumn": 37
+      },
+      "sourceOwner": "QuantumOracle.BasisLookup.xorPerm",
+      "declarations": [
+        "QuantumOracle.BasisLookup.xorPerm"
+      ],
+      "sha256": "d05fc96e18bc8c05a283fe23518e170236e55645d2789f2488c88ac7a197cb16"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 425,
+        "startColumn": 0,
+        "selectionStartLine": 425,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 425,
+        "selectionEndColumn": 14,
+        "endLine": 429,
+        "endColumn": 54
+      },
+      "sourceOwner": "QuantumOracle.BasisLookup.bitXorPerm",
+      "declarations": [
+        "QuantumOracle.BasisLookup.bitXorPerm"
+      ],
+      "sha256": "12132c9a683964479b0078eceb6bcc47e749bf64cc290abfb7f69806bb557343"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 431,
+        "startColumn": 0,
+        "selectionStartLine": 432,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 432,
+        "selectionEndColumn": 14,
+        "endLine": 437,
+        "endColumn": 37
+      },
+      "sourceOwner": "QuantumOracle.BasisLookup.liftLookup",
+      "declarations": [
+        "QuantumOracle.BasisLookup.liftLookup"
+      ],
+      "sha256": "6fda7835bd33dd8f34483e8fcc5233a44af56918bf67ee164aa86dd408a4fcc4"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 450,
+        "startColumn": 0,
+        "selectionStartLine": 451,
+        "selectionStartColumn": 7,
+        "selectionEndLine": 451,
+        "selectionEndColumn": 15,
+        "endLine": 451,
+        "endColumn": 43
+      },
+      "sourceOwner": "QuantumOracle.BasisLookup.Encoding",
+      "declarations": [
+        "QuantumOracle.BasisLookup.Encoding"
+      ],
+      "sha256": "bf89424b505f1085aeeccb709ff25982411c882beeebad97d633187b332a8621"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 453,
+        "startColumn": 0,
+        "selectionStartLine": 453,
+        "selectionStartColumn": 18,
+        "selectionEndLine": 453,
+        "selectionEndColumn": 32,
+        "endLine": 457,
+        "endColumn": 22
+      },
+      "sourceOwner": "QuantumOracle.BasisLookup.ordinaryAnswer",
+      "declarations": [
+        "QuantumOracle.BasisLookup.ordinaryAnswer"
+      ],
+      "sha256": "ca56d369bd52bfe1f5a7b3a95259dbc230754561b7d4618ea0038dc5ccb8ca12"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 459,
+        "startColumn": 0,
+        "selectionStartLine": 461,
+        "selectionStartColumn": 18,
+        "selectionEndLine": 461,
+        "selectionEndColumn": 30,
+        "endLine": 465,
+        "endColumn": 30
+      },
+      "sourceOwner": "QuantumOracle.BasisLookup.markedAnswer",
+      "declarations": [
+        "QuantumOracle.BasisLookup.markedAnswer"
+      ],
+      "sha256": "1b9aa134a79c2fda55416de6003b1027561c498786ad309a8c2bd23ae3b0b69b"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 467,
+        "startColumn": 0,
+        "selectionStartLine": 468,
+        "selectionStartColumn": 18,
+        "selectionEndLine": 468,
+        "selectionEndColumn": 26,
+        "endLine": 470,
+        "endColumn": 59
+      },
+      "sourceOwner": "QuantumOracle.BasisLookup.ordinary",
+      "declarations": [
+        "QuantumOracle.BasisLookup.ordinary"
+      ],
+      "sha256": "ae151875696455e03a56a82cf79e5352906aed3b0d2f910e5cea54fef02f6d90"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 472,
+        "startColumn": 0,
+        "selectionStartLine": 473,
+        "selectionStartColumn": 18,
+        "selectionEndLine": 473,
+        "selectionEndColumn": 24,
+        "endLine": 477,
+        "endColumn": 44
+      },
+      "sourceOwner": "QuantumOracle.BasisLookup.marked",
+      "declarations": [
+        "QuantumOracle.BasisLookup.marked"
+      ],
+      "sha256": "16e41eac74bfad7e1e413923a26c5453944879806b4c6feb9c96f42a5fda6f6c"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 522,
+        "startColumn": 0,
+        "selectionStartLine": 523,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 523,
+        "selectionEndColumn": 8,
+        "endLine": 527,
+        "endColumn": 32
+      },
+      "sourceOwner": "QuantumOracle.BasisLookup.flip",
+      "declarations": [
+        "QuantumOracle.BasisLookup.flip"
+      ],
+      "sha256": "3dc509dab5e948f6ecb5a8d3c8c7675236e92e8ca9b8ca1ed49958996185ce1f"
+    },
+    {
+      "source": "QuantumOracle/Model/Database.lean",
+      "range": {
+        "startLine": 552,
+        "startColumn": 0,
+        "selectionStartLine": 553,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 553,
+        "selectionEndColumn": 14,
+        "endLine": 557,
+        "endColumn": 49
+      },
+      "sourceOwner": "QuantumOracle.BasisLookup.controlled",
+      "declarations": [
+        "QuantumOracle.BasisLookup.controlled"
+      ],
+      "sha256": "552596464ef787dd8890cd270aa963c879ce1b1c04810e3db888098c094dc384"
+    },
+    {
+      "source": "QuantumOracle/Model/ExactCoherentQuery.lean",
+      "range": {
+        "startLine": 21,
+        "startColumn": 0,
+        "selectionStartLine": 22,
+        "selectionStartColumn": 7,
+        "selectionEndLine": 22,
+        "selectionEndColumn": 11,
+        "endLine": 22,
+        "endColumn": 66
+      },
+      "sourceOwner": "QuantumOracle.ExactCoherentQuery.Args",
+      "declarations": [
+        "QuantumOracle.ExactCoherentQuery.Args"
+      ],
+      "sha256": "1d206b234407a0e645a81e08e788cc73690fde2cfdec198a78766e1979d66a30"
+    },
+    {
+      "source": "QuantumOracle/Model/ExactCoherentQuery.lean",
+      "range": {
+        "startLine": 56,
+        "startColumn": 0,
+        "selectionStartLine": 58,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 58,
+        "selectionEndColumn": 17,
+        "endLine": 62,
+        "endColumn": 57
+      },
+      "sourceOwner": "QuantumOracle.ExactCoherentQuery.argumentBasis",
+      "declarations": [
+        "QuantumOracle.ExactCoherentQuery.argumentBasis"
+      ],
+      "sha256": "1eadfcbda990c5e846d454605925d8de5a0e66843b699f96a1d2a89311cce27e"
+    },
+    {
+      "source": "QuantumOracle/Model/ExactCoherentQuery.lean",
+      "range": {
+        "startLine": 78,
+        "startColumn": 0,
+        "selectionStartLine": 79,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 79,
+        "selectionEndColumn": 14,
+        "endLine": 81,
+        "endColumn": 51
+      },
+      "sourceOwner": "QuantumOracle.ExactCoherentQuery.queryBasis",
+      "declarations": [
+        "QuantumOracle.ExactCoherentQuery.queryBasis"
+      ],
+      "sha256": "7211a49ac6e94677608c167e26f9a5039f27ac998d145ef08c21e0478e683151"
+    },
+    {
+      "source": "QuantumOracle/Model/ExactCoherentQuery.lean",
+      "range": {
+        "startLine": 108,
+        "startColumn": 0,
+        "selectionStartLine": 110,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 110,
+        "selectionEndColumn": 9,
+        "endLine": 113,
+        "endColumn": 45
+      },
+      "sourceOwner": "QuantumOracle.ExactCoherentQuery.query",
+      "declarations": [
+        "QuantumOracle.ExactCoherentQuery.query"
+      ],
+      "sha256": "095ab7bad292c78162abe78d6e07cc7284d4ea5218decfcb909c7639b196e2cc"
+    },
+    {
+      "source": "QuantumOracle/Model/ExactExecution.lean",
+      "range": {
+        "startLine": 21,
+        "startColumn": 0,
+        "selectionStartLine": 22,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 22,
+        "selectionEndColumn": 11,
+        "endLine": 24,
+        "endColumn": 79
+      },
+      "sourceOwner": "QuantumOracle.ExactExecution.initial",
+      "declarations": [
+        "QuantumOracle.ExactExecution.initial"
+      ],
+      "sha256": "6ac2e56c73a26cc0e4f6662a3758f9f0d7bad5ea2eb2f25b9676f94f6aac7a2e"
+    },
+    {
+      "source": "QuantumOracle/Model/ExactExecution.lean",
+      "range": {
+        "startLine": 68,
+        "startColumn": 0,
+        "selectionStartLine": 69,
+        "selectionStartColumn": 7,
+        "selectionEndLine": 69,
+        "selectionEndColumn": 16,
+        "endLine": 69,
+        "endColumn": 58
+      },
+      "sourceOwner": "QuantumOracle.ExactExecution.Workspace",
+      "declarations": [
+        "QuantumOracle.ExactExecution.Workspace"
+      ],
+      "sha256": "25ccc5f71e827ed6ef52004e90fc72136e01643d65c20c4d0261bdb7e531a35c"
+    },
+    {
+      "source": "QuantumOracle/Model/ExactExecution.lean",
+      "range": {
+        "startLine": 71,
+        "startColumn": 0,
+        "selectionStartLine": 74,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 74,
+        "selectionEndColumn": 7,
+        "endLine": 81,
+        "endColumn": 71
+      },
+      "sourceOwner": "QuantumOracle.ExactExecution.run",
+      "declarations": [
+        "QuantumOracle.ExactExecution.run",
+        "QuantumOracle.ExactExecution.run._f",
+        "QuantumOracle.ExactExecution.run.match_1"
+      ],
+      "sha256": "ee3afefdcb3bffbf036d85b28968a9bb3063bc39aba46671a07647c21a212e4e"
+    },
+    {
+      "source": "QuantumOracle/Model/ExactQueryGrowth.lean",
+      "range": {
+        "startLine": 40,
+        "startColumn": 0,
+        "selectionStartLine": 42,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 42,
+        "selectionEndColumn": 15,
+        "endLine": 47,
+        "endColumn": 74
+      },
+      "sourceOwner": "QuantumOracle.ExactQueryGrowth.liftedQuery",
+      "declarations": [
+        "QuantumOracle.ExactQueryGrowth.liftedQuery"
+      ],
+      "sha256": "fd032bb2337c1f0b8a914c2503e3cdf7b76ff00cb00dc53b80fe5123701cec06"
+    },
+    {
+      "source": "QuantumOracle/Model/ExtensionOperator.lean",
+      "range": {
+        "startLine": 21,
+        "startColumn": 0,
+        "selectionStartLine": 21,
+        "selectionStartColumn": 7,
+        "selectionEndLine": 21,
+        "selectionEndColumn": 12,
+        "endLine": 21,
+        "endColumn": 44
+      },
+      "sourceOwner": "QuantumOracle.ExtensionOperator.Level",
+      "declarations": [
+        "QuantumOracle.ExtensionOperator.Level"
+      ],
+      "sha256": "dc6c95d65337dda9238b01b1d942cfae050a2698806a1f1165fe6bf0f47fddb7"
+    },
+    {
+      "source": "QuantumOracle/Model/ExtensionOperator.lean",
+      "range": {
+        "startLine": 23,
+        "startColumn": 0,
+        "selectionStartLine": 23,
+        "selectionStartColumn": 23,
+        "selectionEndLine": 23,
+        "selectionEndColumn": 35,
+        "endLine": 26,
+        "endColumn": 16
+      },
+      "sourceOwner": "QuantumOracle.ExtensionOperator.levelFintype",
+      "declarations": [
+        "QuantumOracle.ExtensionOperator.levelFintype"
+      ],
+      "sha256": "3b31830c109d3d191a494c6d7ac04ca59fcca79451c67f2f1912db12c0e9559f"
+    },
+    {
+      "source": "QuantumOracle/Model/ExtensionOperator.lean",
+      "range": {
+        "startLine": 31,
+        "startColumn": 0,
+        "selectionStartLine": 32,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 32,
+        "selectionEndColumn": 10,
+        "endLine": 33,
+        "endColumn": 43
+      },
+      "sourceOwner": "QuantumOracle.ExtensionOperator.matrix",
+      "declarations": [
+        "QuantumOracle.ExtensionOperator.matrix"
+      ],
+      "sha256": "397170de7afcaa41e491caa89b55f68b611becfb1e258de8a23d0bc0a093e13c"
+    },
+    {
+      "source": "QuantumOracle/Model/ExtensionOperator.lean",
+      "range": {
+        "startLine": 35,
+        "startColumn": 0,
+        "selectionStartLine": 36,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 36,
+        "selectionEndColumn": 5,
+        "endLine": 38,
+        "endColumn": 29
+      },
+      "sourceOwner": "QuantumOracle.ExtensionOperator.T",
+      "declarations": [
+        "QuantumOracle.ExtensionOperator.T"
+      ],
+      "sha256": "a18ce0eb8027a3e90b9f647427eef0e4f1bf7c6d421c14733db1a45b068d1dd5"
+    },
+    {
+      "source": "QuantumOracle/Model/FinitePurification.lean",
+      "range": {
+        "startLine": 21,
+        "startColumn": 0,
+        "selectionStartLine": 22,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 22,
+        "selectionEndColumn": 14,
+        "endLine": 24,
+        "endColumn": 33
+      },
+      "sourceOwner": "QuantumOracle.FinitePurification.reducedFin",
+      "declarations": [
+        "QuantumOracle.FinitePurification.reducedFin"
+      ],
+      "sha256": "d92b21c0e673b08f9c0e6ab3f0d211cc08aaaae0203c7cda112ba3ee60c3b7a4"
+    },
+    {
+      "source": "QuantumOracle/Model/FinitePurification.lean",
+      "range": {
+        "startLine": 26,
+        "startColumn": 0,
+        "selectionStartLine": 27,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 27,
+        "selectionEndColumn": 22,
+        "endLine": 30,
+        "endColumn": 78
+      },
+      "sourceOwner": "QuantumOracle.FinitePurification.coordinateIsometry",
+      "declarations": [
+        "QuantumOracle.FinitePurification.coordinateIsometry"
+      ],
+      "sha256": "74a312ea5ff56f905637673d7cc3de8738a52433690453e19cf2c2f491e2be18"
+    },
+    {
+      "source": "QuantumOracle/Model/FinitePurification.lean",
+      "range": {
+        "startLine": 32,
+        "startColumn": 0,
+        "selectionStartLine": 32,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 32,
+        "selectionEndColumn": 19,
+        "endLine": 33,
+        "endColumn": 75
+      },
+      "sourceOwner": "QuantumOracle.FinitePurification.coordinateState",
+      "declarations": [
+        "QuantumOracle.FinitePurification.coordinateState"
+      ],
+      "sha256": "670cad9b8f6f1331b766675d7823d2c71ac00e1e3d30e74a21ff6bfdf9669b8c"
+    },
+    {
+      "source": "QuantumOracle/Model/HarmonicLayers.lean",
+      "range": {
+        "startLine": 19,
+        "startColumn": 0,
+        "selectionStartLine": 21,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 21,
+        "selectionEndColumn": 5,
+        "endLine": 23,
+        "endColumn": 35
+      },
+      "sourceOwner": "QuantumOracle.HarmonicLayers.H",
+      "declarations": [
+        "QuantumOracle.HarmonicLayers.H",
+        "QuantumOracle.HarmonicLayers.H.match_1"
+      ],
+      "sha256": "c8cb253249a6285afca6ced29fd6a9f4dae16c3f4ab7fa2fcada90f75e0d2217"
+    },
+    {
+      "source": "QuantumOracle/Model/HiddenIsometry.lean",
+      "range": {
+        "startLine": 22,
+        "startColumn": 0,
+        "selectionStartLine": 23,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 23,
+        "selectionEndColumn": 11,
+        "endLine": 24,
+        "endColumn": 48
+      },
+      "sourceOwner": "QuantumOracle.HiddenIsometry.reduced",
+      "declarations": [
+        "QuantumOracle.HiddenIsometry.reduced"
+      ],
+      "sha256": "b223f0dbbf90b2bc55c6c977a9ac213910940b0ce2216cbc2bb11e1e720c46b7"
+    },
+    {
+      "source": "QuantumOracle/Model/HiddenIsometry.lean",
+      "range": {
+        "startLine": 44,
+        "startColumn": 0,
+        "selectionStartLine": 45,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 45,
+        "selectionEndColumn": 12,
+        "endLine": 65,
+        "endColumn": 19
+      },
+      "sourceOwner": "QuantumOracle.HiddenIsometry.onOracle",
+      "declarations": [
+        "QuantumOracle.HiddenIsometry.onOracle"
+      ],
+      "sha256": "73810574e6591b0a58373deff69035357f485a58fd6c78cb8a54118b915243ac"
+    },
+    {
+      "source": "QuantumOracle/Model/KnowledgeSpace.lean",
+      "range": {
+        "startLine": 21,
+        "startColumn": 0,
+        "selectionStartLine": 22,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 22,
+        "selectionEndColumn": 5,
+        "endLine": 23,
+        "endColumn": 84
+      },
+      "sourceOwner": "QuantumOracle.KnowledgeSpace.K",
+      "declarations": [
+        "QuantumOracle.KnowledgeSpace.K"
+      ],
+      "sha256": "7c63b9452c8f51d2bf21fa865e2765a05339cd2a3f40cb7601337367d4e7542f"
+    },
+    {
+      "source": "QuantumOracle/Model/LevelEmbedding.lean",
+      "range": {
+        "startLine": 20,
+        "startColumn": 0,
+        "selectionStartLine": 21,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 21,
+        "selectionEndColumn": 9,
+        "endLine": 51,
+        "endColumn": 64
+      },
+      "sourceOwner": "QuantumOracle.LevelEmbedding.embed",
+      "declarations": [
+        "QuantumOracle.LevelEmbedding.embed"
+      ],
+      "sha256": "7187dc47d915a86248d68e3616908cf31c25a20bf53cdaf194a18458292126bb"
+    },
+    {
+      "source": "QuantumOracle/Model/MatrixPolar.lean",
+      "range": {
+        "startLine": 22,
+        "startColumn": 0,
+        "selectionStartLine": 23,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 23,
+        "selectionEndColumn": 12,
+        "endLine": 23,
+        "endColumn": 67
+      },
+      "sourceOwner": "QuantumOracle.MatrixPolar.gramSqrt",
+      "declarations": [
+        "QuantumOracle.MatrixPolar.gramSqrt"
+      ],
+      "sha256": "43fb6456a0263e79b69daa583b8d76f9820aacb20561a68e402c613aa7d07e15"
+    },
+    {
+      "source": "QuantumOracle/Model/MatrixPolar.lean",
+      "range": {
+        "startLine": 25,
+        "startColumn": 0,
+        "selectionStartLine": 26,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 26,
+        "selectionEndColumn": 13,
+        "endLine": 26,
+        "endColumn": 69
+      },
+      "sourceOwner": "QuantumOracle.MatrixPolar.normalize",
+      "declarations": [
+        "QuantumOracle.MatrixPolar.normalize"
+      ],
+      "sha256": "0af5e5c261cfd2bfaa57a2ba82c0d2a363e6b9acd515976822295a4bc7e0736e"
+    },
+    {
+      "source": "QuantumOracle/Model/MatrixPolar.lean",
+      "range": {
+        "startLine": 105,
+        "startColumn": 0,
+        "selectionStartLine": 106,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 106,
+        "selectionEndColumn": 12,
+        "endLine": 108,
+        "endColumn": 69
+      },
+      "sourceOwner": "QuantumOracle.MatrixPolar.isometry",
+      "declarations": [
+        "QuantumOracle.MatrixPolar.isometry"
+      ],
+      "sha256": "4ff47b6595a8415f198a17606b3f076bc8f29bf24fb7a0946bd594167494d8ba"
+    },
+    {
+      "source": "QuantumOracle/Model/OrthonormalSwap.lean",
+      "range": {
+        "startLine": 19,
+        "startColumn": 0,
+        "selectionStartLine": 21,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 21,
+        "selectionEndColumn": 19,
+        "endLine": 22,
+        "endColumn": 27
+      },
+      "sourceOwner": "QuantumOracle.orthonormalSwap",
+      "declarations": [
+        "QuantumOracle.orthonormalSwap"
+      ],
+      "sha256": "77ff5d5bd91eb67d281c3c5b40f28e731b8ebc2c1b2b6d365defe1dcfe7c73dd"
+    },
+    {
+      "source": "QuantumOracle/Model/OutputDiscard.lean",
+      "range": {
+        "startLine": 19,
+        "startColumn": 0,
+        "selectionStartLine": 20,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 20,
+        "selectionEndColumn": 19,
+        "endLine": 22,
+        "endColumn": 85
+      },
+      "sourceOwner": "QuantumOracle.OutputDiscard.discardIsometry",
+      "declarations": [
+        "QuantumOracle.OutputDiscard.discardIsometry"
+      ],
+      "sha256": "9e93953ed23f6f08c4e6d98c4cb6fbf71b80b39b56e7cc11517d4cb0529722ab"
+    },
+    {
+      "source": "QuantumOracle/Model/OutputDiscard.lean",
+      "range": {
+        "startLine": 24,
+        "startColumn": 0,
+        "selectionStartLine": 24,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 24,
+        "selectionEndColumn": 17,
+        "endLine": 25,
+        "endColumn": 57
+      },
+      "sourceOwner": "QuantumOracle.OutputDiscard.discardVector",
+      "declarations": [
+        "QuantumOracle.OutputDiscard.discardVector"
+      ],
+      "sha256": "3936cbab2218ab08f3748c8ed8936323ee453ea7f11ebb07d9493dd71f190f18"
+    },
+    {
+      "source": "QuantumOracle/Model/OutputExperiment.lean",
+      "range": {
+        "startLine": 24,
+        "startColumn": 0,
+        "selectionStartLine": 27,
+        "selectionStartColumn": 10,
+        "selectionEndLine": 27,
+        "selectionEndColumn": 19,
+        "endLine": 33,
+        "endColumn": 43
+      },
+      "sourceOwner": "QuantumOracle.OutputExperiment.Algorithm",
+      "declarations": [
+        "QuantumOracle.OutputExperiment.Algorithm",
+        "QuantumOracle.OutputExperiment.Algorithm.Discard",
+        "QuantumOracle.OutputExperiment.Algorithm.Output",
+        "QuantumOracle.OutputExperiment.Algorithm.base",
+        "QuantumOracle.OutputExperiment.Algorithm.discardFintype",
+        "QuantumOracle.OutputExperiment.Algorithm.mk",
+        "QuantumOracle.OutputExperiment.Algorithm.outputFintype",
+        "QuantumOracle.OutputExperiment.Algorithm.split"
+      ],
+      "sha256": "167b9d0a66548e42cbe143d652ca46ca43a35e95913f0bdd6370cc31a2e5da77"
+    },
+    {
+      "source": "QuantumOracle/Model/OutputExperiment.lean",
+      "range": {
+        "startLine": 46,
+        "startColumn": 0,
+        "selectionStartLine": 46,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 46,
+        "selectionEndColumn": 15,
+        "endLine": 48,
+        "endColumn": 70
+      },
+      "sourceOwner": "QuantumOracle.OutputExperiment.exactVector",
+      "declarations": [
+        "QuantumOracle.OutputExperiment.exactVector"
+      ],
+      "sha256": "60a9804509034999277653d64d3596e7df752b7f1a39256005fda4288b10ec0a"
+    },
+    {
+      "source": "QuantumOracle/Model/OutputExperiment.lean",
+      "range": {
+        "startLine": 50,
+        "startColumn": 0,
+        "selectionStartLine": 50,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 50,
+        "selectionEndColumn": 20,
+        "endLine": 52,
+        "endColumn": 75
+      },
+      "sourceOwner": "QuantumOracle.OutputExperiment.compressedVector",
+      "declarations": [
+        "QuantumOracle.OutputExperiment.compressedVector"
+      ],
+      "sha256": "efd830f079f2c2b120052112a2f86de8567d129b34492030c18ef956a52ec10d"
+    },
+    {
+      "source": "QuantumOracle/Model/OutputExperiment.lean",
+      "range": {
+        "startLine": 62,
+        "startColumn": 0,
+        "selectionStartLine": 62,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 62,
+        "selectionEndColumn": 14,
+        "endLine": 63,
+        "endColumn": 77
+      },
+      "sourceOwner": "QuantumOracle.OutputExperiment.exactFinal",
+      "declarations": [
+        "QuantumOracle.OutputExperiment.exactFinal"
+      ],
+      "sha256": "4ea5bf90eb3cb5f7f3f2e2973b3742342678d3dc972431113c826f8cc987fb29"
+    },
+    {
+      "source": "QuantumOracle/Model/OutputExperiment.lean",
+      "range": {
+        "startLine": 65,
+        "startColumn": 0,
+        "selectionStartLine": 65,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 65,
+        "selectionEndColumn": 19,
+        "endLine": 66,
+        "endColumn": 82
+      },
+      "sourceOwner": "QuantumOracle.OutputExperiment.compressedFinal",
+      "declarations": [
+        "QuantumOracle.OutputExperiment.compressedFinal"
+      ],
+      "sha256": "e69bd4d8a776ebc8e5bd0167c338b5792ff193fe471c2be224dcb169742a434d"
+    },
+    {
+      "source": "QuantumOracle/Model/OutputExperiment.lean",
+      "range": {
+        "startLine": 114,
+        "startColumn": 0,
+        "selectionStartLine": 114,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 114,
+        "selectionEndColumn": 10,
+        "endLine": 119,
+        "endColumn": 47
+      },
+      "sourceOwner": "QuantumOracle.OutputExperiment.family",
+      "declarations": [
+        "QuantumOracle.OutputExperiment.family"
+      ],
+      "sha256": "9dbe1998892b3879b09bb7119f702e113205b25498239164a215152e4237842d"
+    },
+    {
+      "source": "QuantumOracle/Model/OutputExperiment.lean",
+      "range": {
+        "startLine": 121,
+        "startColumn": 0,
+        "selectionStartLine": 122,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 122,
+        "selectionEndColumn": 8,
+        "endLine": 122,
+        "endColumn": 82
+      },
+      "sourceOwner": "QuantumOracle.OutputExperiment.Dist",
+      "declarations": [
+        "QuantumOracle.OutputExperiment.Dist"
+      ],
+      "sha256": "692283fa115b6bcb418853b617e11c7e4cdd44664c532ecfc4c01c5cfb92faf3"
+    },
+    {
+      "source": "QuantumOracle/Model/PermutationExtensions.lean",
+      "range": {
+        "startLine": 11,
+        "startColumn": 0,
+        "selectionStartLine": 11,
+        "selectionStartColumn": 7,
+        "selectionEndLine": 11,
+        "selectionEndColumn": 11,
+        "endLine": 11,
+        "endColumn": 41
+      },
+      "sourceOwner": "QuantumOracle.PermutationExtensions.Perm",
+      "declarations": [
+        "QuantumOracle.PermutationExtensions.Perm"
+      ],
+      "sha256": "d86f07df2ae0d7dbb3965abbb720bf7310a3526bae0a5fab6a5571e8f54db66f"
+    },
+    {
+      "source": "QuantumOracle/Model/PermutationExtensions.lean",
+      "range": {
+        "startLine": 15,
+        "startColumn": 0,
+        "selectionStartLine": 16,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 16,
+        "selectionEndColumn": 11,
+        "endLine": 17,
+        "endColumn": 35
+      },
+      "sourceOwner": "QuantumOracle.PermutationExtensions.Extends",
+      "declarations": [
+        "QuantumOracle.PermutationExtensions.Extends"
+      ],
+      "sha256": "93dccba1b67b35fe11599947a7999cfb290c5edead08d3f843e613b74a00f89b"
+    },
+    {
+      "source": "QuantumOracle/Model/PolarEmbedding.lean",
+      "range": {
+        "startLine": 25,
+        "startColumn": 0,
+        "selectionStartLine": 26,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 26,
+        "selectionEndColumn": 10,
+        "endLine": 27,
+        "endColumn": 51
+      },
+      "sourceOwner": "QuantumOracle.PolarEmbedding.matrix",
+      "declarations": [
+        "QuantumOracle.PolarEmbedding.matrix"
+      ],
+      "sha256": "f2d2955278fa4778ebafb3723fe3556e5f0d7a5708ab9391de4abf726a01f200"
+    },
+    {
+      "source": "QuantumOracle/Model/PolarEmbedding.lean",
+      "range": {
+        "startLine": 49,
+        "startColumn": 0,
+        "selectionStartLine": 50,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 50,
+        "selectionEndColumn": 13,
+        "endLine": 52,
+        "endColumn": 61
+      },
+      "sourceOwner": "QuantumOracle.PolarEmbedding.candidate",
+      "declarations": [
+        "QuantumOracle.PolarEmbedding.candidate"
+      ],
+      "sha256": "cad5814fc86311db0f31fd5d99e870f34f501987c1e0e3e43f9712f8a3ffb5e3"
+    },
+    {
+      "source": "QuantumOracle/Model/ProjectorPurification.lean",
+      "range": {
+        "startLine": 26,
+        "startColumn": 0,
+        "selectionStartLine": 27,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 27,
+        "selectionEndColumn": 11,
+        "endLine": 29,
+        "endColumn": 50
+      },
+      "sourceOwner": "QuantumOracle.ProjectorPurification.project",
+      "declarations": [
+        "QuantumOracle.ProjectorPurification.project"
+      ],
+      "sha256": "b3af619b5dedb6f88ccf1948f201916699e740f0e8bfdb11c4c0239868063434"
+    },
+    {
+      "source": "QuantumOracle/Model/PurificationDistance.lean",
+      "range": {
+        "startLine": 19,
+        "startColumn": 0,
+        "selectionStartLine": 19,
+        "selectionStartColumn": 7,
+        "selectionEndLine": 19,
+        "selectionEndColumn": 16,
+        "endLine": 19,
+        "endColumn": 62
+      },
+      "sourceOwner": "QuantumOracle.PureState",
+      "declarations": [
+        "QuantumOracle.PureState"
+      ],
+      "sha256": "5c18f9d3ea009f4f9587fa124eff0ce5c13f886507bc9ddec9085dfe59d772c0"
+    },
+    {
+      "source": "QuantumOracle/Model/PurificationDistance.lean",
+      "range": {
+        "startLine": 20,
+        "startColumn": 0,
+        "selectionStartLine": 20,
+        "selectionStartColumn": 7,
+        "selectionEndLine": 20,
+        "selectionEndColumn": 19,
+        "endLine": 20,
+        "endColumn": 55
+      },
+      "sourceOwner": "QuantumOracle.ReducedState",
+      "declarations": [
+        "QuantumOracle.ReducedState"
+      ],
+      "sha256": "4cdf48e09493bbacd269a247cfeedadf46d94823d23d31fe50cdbed4368f6762"
+    },
+    {
+      "source": "QuantumOracle/Model/PurificationDistance.lean",
+      "range": {
+        "startLine": 22,
+        "startColumn": 0,
+        "selectionStartLine": 23,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 23,
+        "selectionEndColumn": 16,
+        "endLine": 24,
+        "endColumn": 52
+      },
+      "sourceOwner": "QuantumOracle.reducedState",
+      "declarations": [
+        "QuantumOracle.reducedState"
+      ],
+      "sha256": "a15a0a4f4797bf6fbf80b1e905068b250a38d1c3c1ab58ddbdf7fc764b1b36f6"
+    },
+    {
+      "source": "QuantumOracle/Model/PurificationDistance.lean",
+      "range": {
+        "startLine": 26,
+        "startColumn": 0,
+        "selectionStartLine": 28,
+        "selectionStartColumn": 10,
+        "selectionEndLine": 28,
+        "selectionEndColumn": 28,
+        "endLine": 35,
+        "endColumn": 58
+      },
+      "sourceOwner": "QuantumOracle.CommonPurification",
+      "declarations": [
+        "QuantumOracle.CommonPurification",
+        "QuantumOracle.CommonPurification.ancillaDim",
+        "QuantumOracle.CommonPurification.compressedVector",
+        "QuantumOracle.CommonPurification.exactVector",
+        "QuantumOracle.CommonPurification.mk"
+      ],
+      "sha256": "d49e147fa272dacad9d20c1f1e1c1deb82199afd539134beae79d000f5662768"
+    },
+    {
+      "source": "QuantumOracle/Model/PurificationDistance.lean",
+      "range": {
+        "startLine": 37,
+        "startColumn": 0,
+        "selectionStartLine": 37,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 37,
+        "selectionEndColumn": 31,
+        "endLine": 39,
+        "endColumn": 38
+      },
+      "sourceOwner": "QuantumOracle.CommonPurification.distance",
+      "declarations": [
+        "QuantumOracle.CommonPurification.distance"
+      ],
+      "sha256": "79383934e1bdf3b6f539e2abdcf8b0b5941c4918b695bc08a919a22c286e005d"
+    },
+    {
+      "source": "QuantumOracle/Model/PurificationDistance.lean",
+      "range": {
+        "startLine": 50,
+        "startColumn": 0,
+        "selectionStartLine": 51,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 51,
+        "selectionEndColumn": 24,
+        "endLine": 52,
+        "endColumn": 66
+      },
+      "sourceOwner": "QuantumOracle.purificationDistance",
+      "declarations": [
+        "QuantumOracle.purificationDistance"
+      ],
+      "sha256": "cbf749efd856808bff0cec71dc98d7ba132a4efa48ddd0669550ec747e2e7a14"
+    },
+    {
+      "source": "QuantumOracle/Model/PurificationDistance.lean",
+      "range": {
+        "startLine": 71,
+        "startColumn": 0,
+        "selectionStartLine": 73,
+        "selectionStartColumn": 10,
+        "selectionEndLine": 73,
+        "selectionEndColumn": 26,
+        "endLine": 78,
+        "endColumn": 90
+      },
+      "sourceOwner": "QuantumOracle.ExperimentFamily",
+      "declarations": [
+        "QuantumOracle.ExperimentFamily",
+        "QuantumOracle.ExperimentFamily.compressedFinal",
+        "QuantumOracle.ExperimentFamily.exactFinal",
+        "QuantumOracle.ExperimentFamily.mk",
+        "QuantumOracle.ExperimentFamily.queries",
+        "QuantumOracle.ExperimentFamily.workspaceDim"
+      ],
+      "sha256": "d1caf390d9fa4cfaeb4814b5b1da0d1ad916861957cfe7b18893975b19aafb91"
+    },
+    {
+      "source": "QuantumOracle/Model/PurificationDistance.lean",
+      "range": {
+        "startLine": 80,
+        "startColumn": 0,
+        "selectionStartLine": 82,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 82,
+        "selectionEndColumn": 25,
+        "endLine": 84,
+        "endColumn": 68
+      },
+      "sourceOwner": "QuantumOracle.ExperimentFamily.Dist",
+      "declarations": [
+        "QuantumOracle.ExperimentFamily.Dist"
+      ],
+      "sha256": "5506b42d1ac90422c51cfcad2e28debc3cb706e5fb0fe576d57306c1a209e566"
+    },
+    {
+      "source": "QuantumOracle/Model/Query.lean",
+      "range": {
+        "startLine": 21,
+        "startColumn": 0,
+        "selectionStartLine": 23,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 23,
+        "selectionEndColumn": 14,
+        "endLine": 25,
+        "endColumn": 43
+      },
+      "sourceOwner": "QuantumOracle.Query.linearLift",
+      "declarations": [
+        "QuantumOracle.Query.linearLift"
+      ],
+      "sha256": "a9e50e34587877e748f0f9f5487763a470959c05222d00fa4f47f0e6cf28b82e"
+    },
+    {
+      "source": "QuantumOracle/Model/Query.lean",
+      "range": {
+        "startLine": 46,
+        "startColumn": 0,
+        "selectionStartLine": 47,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 47,
+        "selectionEndColumn": 18,
+        "endLine": 50,
+        "endColumn": 44
+      },
+      "sourceOwner": "QuantumOracle.Query.ordinaryLookup",
+      "declarations": [
+        "QuantumOracle.Query.ordinaryLookup"
+      ],
+      "sha256": "035014efdfd9d20f83816955c2993ad5af2bb8e5e1372c5a1a585a1349d0a940"
+    },
+    {
+      "source": "QuantumOracle/Model/Query.lean",
+      "range": {
+        "startLine": 52,
+        "startColumn": 0,
+        "selectionStartLine": 53,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 53,
+        "selectionEndColumn": 16,
+        "endLine": 56,
+        "endColumn": 42
+      },
+      "sourceOwner": "QuantumOracle.Query.markedLookup",
+      "declarations": [
+        "QuantumOracle.Query.markedLookup"
+      ],
+      "sha256": "ce374bdda7569cde1ac0a805aaffba6c99b332b04d0e4038edbdc4337cfb37b7"
+    },
+    {
+      "source": "QuantumOracle/Model/Query.lean",
+      "range": {
+        "startLine": 100,
+        "startColumn": 0,
+        "selectionStartLine": 101,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 101,
+        "selectionEndColumn": 17,
+        "endLine": 106,
+        "endColumn": 37
+      },
+      "sourceOwner": "QuantumOracle.Query.registerBasis",
+      "declarations": [
+        "QuantumOracle.Query.registerBasis"
+      ],
+      "sha256": "493b173abb2a9c156afa10ff02bdfeacb01b3fff634b0cdb2531e036337b6201"
+    },
+    {
+      "source": "QuantumOracle/Model/Query.lean",
+      "range": {
+        "startLine": 112,
+        "startColumn": 0,
+        "selectionStartLine": 113,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 113,
+        "selectionEndColumn": 21,
+        "endLine": 114,
+        "endColumn": 35
+      },
+      "sourceOwner": "QuantumOracle.Query.permutationAnswer",
+      "declarations": [
+        "QuantumOracle.Query.permutationAnswer"
+      ],
+      "sha256": "e232e80b2cc36dcee213b1aa7ed63a7058882a2e861626ce4d138bafab31676b"
+    },
+    {
+      "source": "QuantumOracle/Model/Query.lean",
+      "range": {
+        "startLine": 182,
+        "startColumn": 0,
+        "selectionStartLine": 183,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 183,
+        "selectionEndColumn": 16,
+        "endLine": 188,
+        "endColumn": 37
+      },
+      "sourceOwner": "QuantumOracle.Query.indexedBasis",
+      "declarations": [
+        "QuantumOracle.Query.indexedBasis"
+      ],
+      "sha256": "de280143e1d63fb88b572040dc65b32093ba05cc74a7c007180daa743cdeca0f"
+    },
+    {
+      "source": "QuantumOracle/Model/RawEmbedding.lean",
+      "range": {
+        "startLine": 24,
+        "startColumn": 0,
+        "selectionStartLine": 25,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 25,
+        "selectionEndColumn": 9,
+        "endLine": 26,
+        "endColumn": 78
+      },
+      "sourceOwner": "QuantumOracle.RawEmbedding.total",
+      "declarations": [
+        "QuantumOracle.RawEmbedding.total"
+      ],
+      "sha256": "2cd88f3ec37d15c7d4e5e23f4be028dbe6612e4dfa33f5ab68438507bf4f00bf"
+    },
+    {
+      "source": "QuantumOracle/Model/RawHarmonic.lean",
+      "range": {
+        "startLine": 24,
+        "startColumn": 0,
+        "selectionStartLine": 25,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 25,
+        "selectionEndColumn": 7,
+        "endLine": 27,
+        "endColumn": 61
+      },
+      "sourceOwner": "QuantumOracle.RawHarmonic.raw",
+      "declarations": [
+        "QuantumOracle.RawHarmonic.raw"
+      ],
+      "sha256": "3497087f08a5b228cd80dedbf833b4fad10c15a6b93cea57bbcaf1ef8e84d483"
+    },
+    {
+      "source": "QuantumOracle/Model/SoundnessPurification.lean",
+      "range": {
+        "startLine": 52,
+        "startColumn": 0,
+        "selectionStartLine": 53,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 53,
+        "selectionEndColumn": 22,
+        "endLine": 70,
+        "endColumn": 56
+      },
+      "sourceOwner": "QuantumOracle.FiniteSoundnessWitness.outputPurification",
+      "declarations": [
+        "QuantumOracle.FiniteSoundnessWitness.outputPurification"
+      ],
+      "sha256": "10fd917fb7b6832f4d0466affb267c5efd37183473ab6ff0c835326c9379e665"
+    },
+    {
+      "source": "QuantumOracle/Model/UniformState.lean",
+      "range": {
+        "startLine": 19,
+        "startColumn": 0,
+        "selectionStartLine": 20,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 20,
+        "selectionEndColumn": 13,
+        "endLine": 21,
+        "endColumn": 36
+      },
+      "sourceOwner": "QuantumOracle.UniformState.amplitude",
+      "declarations": [
+        "QuantumOracle.UniformState.amplitude"
+      ],
+      "sha256": "737246a5761b7026a9050a12ab78cac78a6ba0e29da41962f6561e2ab8fed1fb"
+    },
+    {
+      "source": "QuantumOracle/Model/UniformState.lean",
+      "range": {
+        "startLine": 46,
+        "startColumn": 0,
+        "selectionStartLine": 47,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 47,
+        "selectionEndColumn": 12,
+        "endLine": 49,
+        "endColumn": 36
+      },
+      "sourceOwner": "QuantumOracle.UniformState.emptyKet",
+      "declarations": [
+        "QuantumOracle.UniformState.emptyKet"
+      ],
+      "sha256": "10bf9d6d451556c1568f39722b4e4f47f608b327eba44ae00990b8215b75f538"
+    },
+    {
+      "source": "QuantumOracle/Model/UniformState.lean",
+      "range": {
+        "startLine": 64,
+        "startColumn": 0,
+        "selectionStartLine": 65,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 65,
+        "selectionEndColumn": 20,
+        "endLine": 66,
+        "endColumn": 64
+      },
+      "sourceOwner": "QuantumOracle.UniformState.extensionUniform",
+      "declarations": [
+        "QuantumOracle.UniformState.extensionUniform"
+      ],
+      "sha256": "073f51912704e18c950149bd97a6da3b55a3a69f8075eb1b5d86606f119e05c5"
+    },
+    {
+      "source": "QuantumOracle/Model/WorkspaceKnowledge.lean",
+      "range": {
+        "startLine": 19,
+        "startColumn": 0,
+        "selectionStartLine": 20,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 20,
+        "selectionEndColumn": 9,
+        "endLine": 21,
+        "endColumn": 35
+      },
+      "sourceOwner": "QuantumOracle.WorkspaceKnowledge.slice",
+      "declarations": [
+        "QuantumOracle.WorkspaceKnowledge.slice"
+      ],
+      "sha256": "dcf1418db5f7d0f87f7dd71bfd11a4079cd71a024b359fcc77dd6e655f6d8794"
+    },
+    {
+      "source": "QuantumOracle/Model/WorkspaceKnowledge.lean",
+      "range": {
+        "startLine": 83,
+        "startColumn": 0,
+        "selectionStartLine": 84,
+        "selectionStartColumn": 4,
+        "selectionEndLine": 84,
+        "selectionEndColumn": 15,
+        "endLine": 98,
+        "endColumn": 7
+      },
+      "sourceOwner": "QuantumOracle.WorkspaceKnowledge.onWorkspace",
+      "declarations": [
+        "QuantumOracle.WorkspaceKnowledge.onWorkspace"
+      ],
+      "sha256": "9be306e6bc9acf9d6da0f58fcc4540ea854235d4177d5f16fc952a974b5272d0"
+    }
+  ],
+  "coveredDeclarations": [
+    "QuantumOracle.BasisLookup.Bits",
+    "QuantumOracle.BasisLookup.Encoding",
+    "QuantumOracle.BasisLookup.bitXorPerm",
+    "QuantumOracle.BasisLookup.bitXorPerm._proof_1",
+    "QuantumOracle.BasisLookup.controlled",
+    "QuantumOracle.BasisLookup.controlled._proof_1",
+    "QuantumOracle.BasisLookup.controlled._proof_2",
+    "QuantumOracle.BasisLookup.flip",
+    "QuantumOracle.BasisLookup.flip._proof_1",
+    "QuantumOracle.BasisLookup.liftLookup",
+    "QuantumOracle.BasisLookup.liftLookup._proof_1",
+    "QuantumOracle.BasisLookup.liftLookup._proof_2",
+    "QuantumOracle.BasisLookup.marked",
+    "QuantumOracle.BasisLookup.markedAnswer",
+    "QuantumOracle.BasisLookup.ordinary",
+    "QuantumOracle.BasisLookup.ordinaryAnswer",
+    "QuantumOracle.BasisLookup.xor",
+    "QuantumOracle.BasisLookup.xorPerm",
+    "QuantumOracle.BasisLookup.xor_twice",
+    "QuantumOracle.BlockOperator.diagonal",
+    "QuantumOracle.BlockOperator.diagonal._proof_1",
+    "QuantumOracle.BlockOperator.family",
+    "QuantumOracle.BlockOperator.onRight",
+    "QuantumOracle.BlockOperator.restrict._proof_1",
+    "QuantumOracle.BlockOperator.transport",
+    "QuantumOracle.BlockSupport.State",
+    "QuantumOracle.BlockSupport.emptyState",
+    "QuantumOracle.BlockSupport.inverseState._proof_1",
+    "QuantumOracle.CommonPurification",
+    "QuantumOracle.CommonPurification.ancillaDim",
+    "QuantumOracle.CommonPurification.compressedVector",
+    "QuantumOracle.CommonPurification.distance",
+    "QuantumOracle.CommonPurification.exactVector",
+    "QuantumOracle.CommonPurification.mk",
+    "QuantumOracle.CompressedCoherentQuery.branch",
+    "QuantumOracle.CompressedCoherentQuery.controlsEquiv",
+    "QuantumOracle.CompressedCoherentQuery.controlsEquiv._proof_1",
+    "QuantumOracle.CompressedCoherentQuery.controlsEquiv._proof_2",
+    "QuantumOracle.CompressedCoherentQuery.liftedQuery",
+    "QuantumOracle.CompressedCoherentQuery.ordinaryWithMarker",
+    "QuantumOracle.CompressedCoherentQuery.ordinaryWithMarker._proof_1",
+    "QuantumOracle.CompressedCoherentQuery.query",
+    "QuantumOracle.CompressedExecution.Workspace",
+    "QuantumOracle.CompressedExecution.initial",
+    "QuantumOracle.CompressedExecution.run",
+    "QuantumOracle.CompressedExecution.run._f",
+    "QuantumOracle.CompressedExecution.run.match_1",
+    "QuantumOracle.CompressedQuery.compression",
+    "QuantumOracle.CompressedQuery.flip",
+    "QuantumOracle.CompressedQuery.inverseMarked",
+    "QuantumOracle.CompressedQuery.inverseOrdinary",
+    "QuantumOracle.CompressedQuery.marked",
+    "QuantumOracle.CompressedQuery.ordinary",
+    "QuantumOracle.CompressedQuery.ordinary._proof_1",
+    "QuantumOracle.Compression.State",
+    "QuantumOracle.Compression.pC",
+    "QuantumOracle.CompressionBlock.compression",
+    "QuantumOracle.CompressionIndex.Base",
+    "QuantumOracle.CompressionIndex.Fresh",
+    "QuantumOracle.CompressionIndex.Index",
+    "QuantumOracle.CompressionIndex.baseFintype",
+    "QuantumOracle.CompressionIndex.baseFintype._proof_1",
+    "QuantumOracle.CompressionIndex.databaseEquiv",
+    "QuantumOracle.CompressionIndex.databaseEquiv._proof_1",
+    "QuantumOracle.CompressionIndex.decode",
+    "QuantumOracle.CompressionIndex.decode.match_1",
+    "QuantumOracle.CompressionIndex.freshFintype",
+    "QuantumOracle.CompressionIndex.freshFintype._proof_1",
+    "QuantumOracle.ConcreteExperiment.Algorithm",
+    "QuantumOracle.ConcreteExperiment.Algorithm.Workspace",
+    "QuantumOracle.ConcreteExperiment.Algorithm.auxDim",
+    "QuantumOracle.ConcreteExperiment.Algorithm.gates",
+    "QuantumOracle.ConcreteExperiment.Algorithm.initial",
+    "QuantumOracle.ConcreteExperiment.Algorithm.marked",
+    "QuantumOracle.ConcreteExperiment.Algorithm.mk",
+    "QuantumOracle.ConcreteExperiment.Algorithm.queries",
+    "QuantumOracle.ConcreteExperiment.compressedVector",
+    "QuantumOracle.ConcreteExperiment.exactVector",
+    "QuantumOracle.ConsistentState.amplitude",
+    "QuantumOracle.ConsistentState.vector",
+    "QuantumOracle.ConsistentState.vector._proof_1",
+    "QuantumOracle.Database",
+    "QuantumOracle.Database.casesOn",
+    "QuantumOracle.Database.domain",
+    "QuantumOracle.Database.edges",
+    "QuantumOracle.Database.empty",
+    "QuantumOracle.Database.empty._proof_1",
+    "QuantumOracle.Database.empty._proof_2",
+    "QuantumOracle.Database.image",
+    "QuantumOracle.Database.instFinite",
+    "QuantumOracle.Database.instFintype",
+    "QuantumOracle.Database.inverse",
+    "QuantumOracle.Database.inverse._proof_1",
+    "QuantumOracle.Database.inverse._proof_2",
+    "QuantumOracle.Database.level",
+    "QuantumOracle.Database.lookup",
+    "QuantumOracle.Database.mk",
+    "QuantumOracle.Database.rec",
+    "QuantumOracle.Database.set",
+    "QuantumOracle.Database.set._proof_1",
+    "QuantumOracle.Database.set._proof_2",
+    "QuantumOracle.Database.size",
+    "QuantumOracle.Database.update.match_1",
+    "QuantumOracle.ExactCoherentQuery.Args",
+    "QuantumOracle.ExactCoherentQuery.argumentBasis",
+    "QuantumOracle.ExactCoherentQuery.query",
+    "QuantumOracle.ExactCoherentQuery.queryBasis",
+    "QuantumOracle.ExactExecution.Workspace",
+    "QuantumOracle.ExactExecution.initial",
+    "QuantumOracle.ExactExecution.initial._proof_1",
+    "QuantumOracle.ExactExecution.run",
+    "QuantumOracle.ExactExecution.run._f",
+    "QuantumOracle.ExactExecution.run.match_1",
+    "QuantumOracle.ExactQueryGrowth.liftedQuery",
+    "QuantumOracle.ExactQueryGrowth.liftedQuery._proof_1",
+    "QuantumOracle.ExperimentFamily",
+    "QuantumOracle.ExperimentFamily.Dist",
+    "QuantumOracle.ExperimentFamily.compressedFinal",
+    "QuantumOracle.ExperimentFamily.exactFinal",
+    "QuantumOracle.ExperimentFamily.mk",
+    "QuantumOracle.ExperimentFamily.queries",
+    "QuantumOracle.ExperimentFamily.workspaceDim",
+    "QuantumOracle.ExtensionOperator.Level",
+    "QuantumOracle.ExtensionOperator.T",
+    "QuantumOracle.ExtensionOperator.T._proof_1",
+    "QuantumOracle.ExtensionOperator.T._proof_2",
+    "QuantumOracle.ExtensionOperator.levelFintype",
+    "QuantumOracle.ExtensionOperator.matrix",
+    "QuantumOracle.FinitePurification.coordinateIsometry",
+    "QuantumOracle.FinitePurification.coordinateState",
+    "QuantumOracle.FinitePurification.reducedFin",
+    "QuantumOracle.FiniteSoundnessWitness.outputPurification",
+    "QuantumOracle.FiniteSoundnessWitness.outputPurification._proof_1",
+    "QuantumOracle.FiniteSoundnessWitness.outputPurification._proof_2",
+    "QuantumOracle.FiniteSoundnessWitness.outputPurification._proof_3",
+    "QuantumOracle.FiniteSoundnessWitness.outputPurification._proof_4",
+    "QuantumOracle.HarmonicLayers.H",
+    "QuantumOracle.HarmonicLayers.H.match_1",
+    "QuantumOracle.HiddenIsometry.onOracle",
+    "QuantumOracle.HiddenIsometry.onOracle._proof_1",
+    "QuantumOracle.HiddenIsometry.onOracle._proof_2",
+    "QuantumOracle.HiddenIsometry.onOracle._proof_3",
+    "QuantumOracle.HiddenIsometry.onOracle._proof_4",
+    "QuantumOracle.HiddenIsometry.reduced",
+    "QuantumOracle.ImprovedSoundness.soundness",
+    "QuantumOracle.KnowledgeSpace.K",
+    "QuantumOracle.LevelEmbedding.embed",
+    "QuantumOracle.LevelEmbedding.embed._proof_1",
+    "QuantumOracle.LevelEmbedding.embed._proof_2",
+    "QuantumOracle.LevelEmbedding.embed._proof_3",
+    "QuantumOracle.LevelEmbedding.embed._proof_4",
+    "QuantumOracle.MatrixPolar.gramSqrt",
+    "QuantumOracle.MatrixPolar.gramSqrt._proof_1",
+    "QuantumOracle.MatrixPolar.gramSqrt._proof_2",
+    "QuantumOracle.MatrixPolar.gramSqrt._proof_3",
+    "QuantumOracle.MatrixPolar.gramSqrt._proof_4",
+    "QuantumOracle.MatrixPolar.gramSqrt._proof_5",
+    "QuantumOracle.MatrixPolar.gramSqrt._proof_6",
+    "QuantumOracle.MatrixPolar.gramSqrt._proof_7",
+    "QuantumOracle.MatrixPolar.isometry",
+    "QuantumOracle.MatrixPolar.isometry._proof_1",
+    "QuantumOracle.MatrixPolar.isometry._proof_2",
+    "QuantumOracle.MatrixPolar.normalize",
+    "QuantumOracle.MatrixPolar.normalize_inner",
+    "QuantumOracle.OutputDiscard.discardIsometry",
+    "QuantumOracle.OutputDiscard.discardVector",
+    "QuantumOracle.OutputExperiment.Algorithm",
+    "QuantumOracle.OutputExperiment.Algorithm.Discard",
+    "QuantumOracle.OutputExperiment.Algorithm.Output",
+    "QuantumOracle.OutputExperiment.Algorithm.base",
+    "QuantumOracle.OutputExperiment.Algorithm.discardFintype",
+    "QuantumOracle.OutputExperiment.Algorithm.mk",
+    "QuantumOracle.OutputExperiment.Algorithm.outputFintype",
+    "QuantumOracle.OutputExperiment.Algorithm.split",
+    "QuantumOracle.OutputExperiment.Dist",
+    "QuantumOracle.OutputExperiment.compressedFinal",
+    "QuantumOracle.OutputExperiment.compressedVector",
+    "QuantumOracle.OutputExperiment.exactFinal",
+    "QuantumOracle.OutputExperiment.exactVector",
+    "QuantumOracle.OutputExperiment.family",
+    "QuantumOracle.OutputExperiment.family._proof_1",
+    "QuantumOracle.PermutationExtensions.Extends",
+    "QuantumOracle.PermutationExtensions.Perm",
+    "QuantumOracle.PolarEmbedding.candidate",
+    "QuantumOracle.PolarEmbedding.matrix",
+    "QuantumOracle.PolarEmbedding.matrix._proof_1",
+    "QuantumOracle.PolarEmbedding.matrix._proof_2",
+    "QuantumOracle.PolarEmbedding.matrix_mulVec_injective",
+    "QuantumOracle.ProjectorPurification.project",
+    "QuantumOracle.ProjectorPurification.project._proof_1",
+    "QuantumOracle.PureState",
+    "QuantumOracle.Query.indexedBasis",
+    "QuantumOracle.Query.indexedBasis._proof_1",
+    "QuantumOracle.Query.indexedBasis._proof_2",
+    "QuantumOracle.Query.linearLift",
+    "QuantumOracle.Query.linearLift._proof_1",
+    "QuantumOracle.Query.markedLookup",
+    "QuantumOracle.Query.ordinaryLookup",
+    "QuantumOracle.Query.permutationAnswer",
+    "QuantumOracle.Query.registerBasis",
+    "QuantumOracle.Query.registerBasis._proof_1",
+    "QuantumOracle.Query.registerBasis._proof_2",
+    "QuantumOracle.RawEmbedding.total",
+    "QuantumOracle.RawEmbedding.total._proof_1",
+    "QuantumOracle.RawEmbedding.total._proof_2",
+    "QuantumOracle.RawHarmonic.raw",
+    "QuantumOracle.RawHarmonic.raw._proof_1",
+    "QuantumOracle.RawHarmonic.raw._proof_2",
+    "QuantumOracle.RawHarmonic.raw._proof_3",
+    "QuantumOracle.RawHarmonic.raw._proof_4",
+    "QuantumOracle.RawHarmonic.raw._proof_5",
+    "QuantumOracle.RawHarmonic.raw._proof_6",
+    "QuantumOracle.ReducedState",
+    "QuantumOracle.UniformState.amplitude",
+    "QuantumOracle.UniformState.emptyKet",
+    "QuantumOracle.UniformState.extensionUniform",
+    "QuantumOracle.UniformState.uniform._proof_1",
+    "QuantumOracle.WorkspaceKnowledge.onWorkspace",
+    "QuantumOracle.WorkspaceKnowledge.onWorkspace._proof_1",
+    "QuantumOracle.WorkspaceKnowledge.onWorkspace._proof_2",
+    "QuantumOracle.WorkspaceKnowledge.slice",
+    "QuantumOracle.WorkspaceKnowledge.slice._proof_1",
+    "QuantumOracle.instDecidableEqDatabase",
+    "QuantumOracle.instDecidableEqDatabase.decEq",
+    "QuantumOracle.instDecidableEqDatabase.decEq._proof_1",
+    "QuantumOracle.instDecidableEqDatabase.decEq._proof_2",
+    "QuantumOracle.instDecidableEqDatabase.decEq._proof_3",
+    "QuantumOracle.instDecidableEqDatabase.decEq._proof_4",
+    "QuantumOracle.instDecidableEqDatabase.decEq.match_1",
+    "QuantumOracle.orthonormalSwap",
+    "QuantumOracle.orthonormalSwap._proof_1",
+    "QuantumOracle.purificationDistance",
+    "QuantumOracle.reducedState"
+  ],
+  "statementFileSha256": "b92e1881008da8894db039836679246715f424b0b2f74e3eee1c2bee8c92b302",
+  "canonicalStatement": {
+    "path": "QuantumOracle/Statement/Soundness.lean",
+    "sha256": "0211f70f157637bfa933b619edebfff37f0db40600d15896e1dd397d5a175904"
+  },
+  "verificationFileSha256": "b33e52c89fa1c9248c7c63d644f4bb2b8ffb28831afb05e3b7a5436085d9d40b",
+  "semanticExtractionSha256": "c2deeb8522786ae433d7ec2df0f0ccdf7a3ffaf9de5476a63f5b1eedd0c2a743"
+}
